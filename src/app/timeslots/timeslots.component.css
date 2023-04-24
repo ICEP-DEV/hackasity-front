@@ -1,50 +1,105 @@
-.container {
+ .line-4 {
+    transform: rotate(90deg);
+    height: 0px;
+    width: 160%;
+    border: 1px solid #786e6e;
+    margin-top: 80%; 
+  }
+  .text-1 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #403d3d;
+    margin-left: 81%;
+    margin-top: -1450px;
+  }
+  .rectangle-4-0 {
+    border-radius: 10px;
+    height: 36px;
+    width: 250px;
+    background-color: #d1c7c7;
+    margin-left: 81%;
+  }
+  .text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: rgba(19, 48, 124, 0.8500000238418579);
+    margin-left: 10px;
+    padding: 5px;
+  }
+  .text-3 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #403d3d;
+    margin-left: 81%;
+  }
+   .toggle-switches {
+    margin-left: 93%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    
+    margin-top: -140px;
   }
   
-  form {
-    width: 50%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  .form-group {
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
     margin-bottom: 10px;
   }
   
-  label {
-    display: block;
-    margin-bottom: 5px;
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
   
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  .toggle-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #13317C;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
   }
   
-  .btn-primary {
-    display: block;
-    width: 5%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    margin-left: 71%;
-    margin-top: -13%;
+  .toggle-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .toggle-switch-input:checked + .toggle-switch-slider {
+    background-color: #2196F3;
+  }
+  
+  .toggle-switch-input:focus + .toggle-switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .toggle-switch-input:checked + .toggle-switch-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
   }
   
