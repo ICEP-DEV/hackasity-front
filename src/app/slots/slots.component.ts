@@ -7,11 +7,16 @@ import {SityService }from '../services/sity.service'
 })
 export class SlotsComponent {
 
-  
+  timeslot= {
+    startTime: "", endTime:"", date: "", judgeid:"1", adminid:"1"
+  }
   constructor(private sityservice: SityService){}
-
+  ngOnInit(): void {
+    console.log(12212)
+  }
   addSlot(){
-
+    
+       
   }
 
 }

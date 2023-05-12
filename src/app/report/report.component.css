@@ -2,7 +2,7 @@
     height: 150px;
     width: 91%;
     background-color: #dfe0e2;
-    margin-top: -17px;
+    margin-top: -19px;
     margin-left: 130px;
     padding-left: 50px;
     
@@ -14,18 +14,13 @@
   .text-1 {
     text-align: left;
     vertical-align: top;
-    font-size: 28;
+    font-size: 20px;
     font-family: Inter;
     line-height: auto;
     color: #141414;
     padding-top: 40px;
-    font-weight: bold;
   }
-  .line-2 {
-    width:100%;
-    text-align:left;
-    margin-left:0;
-  }
+  
 
   .text-2 {
     text-align: left;
@@ -34,9 +29,34 @@
     font-family: Inter;
     line-height: auto;
     color: #000000;
-    margin-left: 9.5%;
+    margin-left: 10%;
     margin-top: 1%;
-    font-weight: bold;
+  }
+  .scoring-table {
+    width: 93.5%;
+    border-collapse: collapse;
+    margin-left:136px;
+    margin-top: -0.5%;
   }
   
+  .scoring-table th,
+  .scoring-table td {
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 58px;
+  }
+  
+  .scoring-table th {
+    background-color: #FFDD88;
+  }
+  
+  .high-score {
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
+
+
+
+
   

@@ -30,7 +30,7 @@ nav {
   a {
     color: #fff;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 24px;
   }
   
   form {
@@ -53,4 +53,13 @@ nav {
     width:400px;
 }
   
-  
+
+/* .search-box {
+  padding-left: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+} */

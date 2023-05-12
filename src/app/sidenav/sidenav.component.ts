@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,5 +7,14 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent {
-  faBell = faBell;
+  
+  constructor(private _router: Router) { }
+
+  navigateToReport(){
+    this._router.navigate(['/report'])
+  }
+  navigateToFiles(){
+    this._router.navigate(['/files'])
+  }
+
 }

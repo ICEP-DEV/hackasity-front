@@ -29,15 +29,16 @@ input {
 input:focus {
   outline: none;
   border-color: #0077CC;
+  
 }
  .input-row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -59.5%;
+  margin-left: -77%;
   display: inline-block;
-  justify-content: space-between;
+  justify-content: space-between ;
   padding: 1%;
-  padding-left: -20%;
+  padding-left: 20%;
 }
 .input-row input[type="text"],
 .input-row select {
@@ -51,9 +52,11 @@ input:focus {
   color: rgb(92, 91, 91);
   max-width: 15.5%;
   text-align: center;
+  
 }
 .input-row select::-ms-expand {
   display: none;
+  
 }
   .text-3 {
     text-align: left;
@@ -65,4 +68,11 @@ input:focus {
     margin-left: 85%;
     margin-top: -270px;
   }  
+  select{
+    margin: 0 30px;
+  }
+
+  select, option{
+   width: 350px;
+  }
   

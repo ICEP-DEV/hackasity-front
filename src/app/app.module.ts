@@ -11,7 +11,12 @@ import { TimeslotsComponent } from './timeslots/timeslots.component';
 import { SlotsComponent } from './slots/slots.component';
 import { ReguserComponent } from './reguser/reguser.component';
 import { HttpClientModule } from '@angular/common/http';
-import {SityService } from './services/sity.service'
+import {SityService } from './services/sity.service';
+import { ReportComponent } from './report/report.component';
+import { FilesComponent } from './files/files.component';
+import { ReghackerComponent } from './reghacker/reghacker.component';
+import { RegjudgeComponent } from './regjudge/regjudge.component';
+import { LandingpageComponent } from './landingpage/landingpage.component'
 
 @NgModule({
   declarations: [
@@ -22,12 +27,23 @@ import {SityService } from './services/sity.service'
     TimeslotsComponent,
     SlotsComponent,
     ReguserComponent,
+    ReportComponent,
+    FilesComponent,
+    ReghackerComponent,
+    RegjudgeComponent,
+    LandingpageComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {path: '', component: SlotsComponent},
+      {path: 'report', component: ReportComponent},
+      {path: 'files', component: FilesComponent},
+
+    ])
   
   ],
   providers: [SityService],
