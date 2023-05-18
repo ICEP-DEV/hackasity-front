@@ -9,4 +9,9 @@ import { Router } from '@angular/router';
 })
 export class FilesComponent {
   constructor(private _router:Router){};
+
+
+  onHacker(hacker : string){
+    this._router.navigate(['/'+hacker])
+  }
 }

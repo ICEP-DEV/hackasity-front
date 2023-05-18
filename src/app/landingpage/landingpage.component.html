@@ -2,7 +2,7 @@
 <section class="bg-image">
 
     <div class="container">
-
+<!-- <marquee><img src="../../assets/slide3.webp" /></marquee> -->
      
       <nav>
         <h1>Hack-a-sity</h1>
@@ -32,33 +32,33 @@
     
   <div class="container1">
     <h2>Login</h2>
-    <form (submit)="onSubmit()">
+    
      
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="role" id="hacker" value="hacker">
+          <input class="form-check-input" type="radio" name="role" id="hacker" value="hacker" [(ngModel)]="role" name="role" >
           <label class="form-check-label" for="hacker">Hacker</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="role" id="admin" value="admin">
+          <input class="form-check-input" type="radio" name="role" id="admin" value="admin" [(ngModel)]="role" name="role">
           <label class="form-check-label" for="admin">Admin</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="role" id="judges" value="judges">
+          <input class="form-check-input" type="radio" name="role" id="judges" value="judges" [(ngModel)]="role" name="role">
           <label class="form-check-label" for="judges">Judges</label>
         </div>
         <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" class="form-control" id="username" name="username" required>
+          <label for="email">Username:</label>
+          <input type="text" class="form-control" id="email" name="email" required [(ngModel)]="loginPage.email" name="loginPage.email">
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" class="form-control" id="password" name="password" required>
+          <input type="password" class="form-control" id="password" name="password" required [(ngModel)]="loginPage.password" name="loginPage.password">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Login</button><br>
+      <button (click)=" button()" type="submit" class="btn btn-primary">Login</button><br>
       <a href="index.html">forgot password?</a>
-    </form>
+    
   
     <!-- <script>
       const navigationButtons = document.querySelectorAll('.navigation-button');

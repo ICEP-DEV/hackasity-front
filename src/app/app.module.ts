@@ -16,7 +16,8 @@ import { ReportComponent } from './report/report.component';
 import { FilesComponent } from './files/files.component';
 import { ReghackerComponent } from './reghacker/reghacker.component';
 import { RegjudgeComponent } from './regjudge/regjudge.component';
-import { LandingpageComponent } from './landingpage/landingpage.component'
+import { LandingpageComponent } from './landingpage/landingpage.component';
+import { WhatsonComponent } from './whatson/whatson.component'
 
 @NgModule({
   declarations: [
@@ -32,16 +33,25 @@ import { LandingpageComponent } from './landingpage/landingpage.component'
     ReghackerComponent,
     RegjudgeComponent,
     LandingpageComponent,
+    WhatsonComponent,
     
   ],
   imports: [
+    FormsModule, 
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: '', component: SlotsComponent},
+      {path: '', component: LandingpageComponent},
       {path: 'report', component: ReportComponent},
       {path: 'files', component: FilesComponent},
+      {path: 'whatson', component: WhatsonComponent},
+      {path: 'registerusers', component:ReguserComponent},
+      {path: 'timeslots', component:SlotsComponent},
+      {path: 'hacker', component:ReghackerComponent},
+      {path: 'judge', component:RegjudgeComponent},
+
 
     ])
   

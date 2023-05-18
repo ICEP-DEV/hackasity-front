@@ -17,4 +17,15 @@ export class SidenavComponent {
     this._router.navigate(['/files'])
   }
 
+  navigateTimeSlot(){
+    this._router.navigate(['/timeslots'])
+  }
+  navigateToWhatsOn(){
+    this._router.navigate(['/whatson'])
+  }
+
+  navigateToRegisterUsers(){
+    this._router.navigate(['/registerusers'])
+  }
+
 }

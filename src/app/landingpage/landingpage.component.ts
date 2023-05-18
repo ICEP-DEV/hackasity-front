@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { SityService } from '../services/sity.service'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-landingpage',
@@ -7,14 +8,67 @@ import { Component } from '@angular/core';
   styleUrls: ['./landingpage.component.css']
 })
 export class LandingpageComponent {
+
+  loginPage = {
+    email: "",
+    password: "",
+  }
+  role = ""
+  sucess: any
+
+  constructor(private sityservice: SityService, private router: Router) {
+
+  }
+
+  button() {
+    if (this.loginPage.password == "" || this.loginPage.email == "" || this.role == "") {
+      return alert("Field must be filled")
+    }
+
+    if (this.role=="hacker"){
+
+    }
+
+    else if (this.role=="admin"){
+      this.sityservice.adminlogin(this.loginPage).subscribe((respond) => {
+        console.log(respond)
+        this.sucess = respond
+        if (this.sucess.success == false) {
+          return alert(this.sucess.message)
+        }
+        else{
+          //return alert(this.sucess.message)
+  
+          return this.router.navigate(["/whatson"])
+        }
+  
+      }, (error) => {
+        console.log(error)
+      })
+    }
+    else{
+      
+    }
+
+
+    
+    
+
+
+  }
+
+
+
+
   onSubmit() {
-    const username = (document.getElementById('username') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;
     const selectedRole = document.querySelector('input[name="role"]:checked') as HTMLInputElement;
-  
-    if (username && password && selectedRole) {
-      console.log('Username:', username);
+
+    if (email && password && selectedRole) {
+      console.log('email:', email);
       console.log('Password:', password);
       console.log('Selected Role:', selectedRole.value);
-    }}
+    }
   }
+}
