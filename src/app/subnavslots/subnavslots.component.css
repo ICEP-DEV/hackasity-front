@@ -1,0 +1,40 @@
+.rectangle-5 {
+    height: 150px;
+    width: 91%;
+    background-color: #dfe0e2;
+    margin-top: -17px;
+    margin-left: 130px;
+    padding-left: 50px;
+    
+  }
+  .navbar {
+    height: 46px;
+    width: 471px;
+  }
+  .text-1 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 28;
+    font-family: Inter;
+    line-height: auto;
+    color: #141414;
+    padding-top: 40px;
+    font-weight: bold;
+  }
+  .line-2 {
+    width:100%;
+    text-align:left;
+    margin-left:0;
+  }
+
+  .text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 28;
+    font-family: Inter;
+    line-height: auto;
+    color: #000000;
+    margin-left: 9.5%;
+    margin-top: 1%;
+    font-weight: bold;
+  }

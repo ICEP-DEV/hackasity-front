@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-subnav',
-  templateUrl: './subnav.component.html',
-  styleUrls: ['./subnav.component.css']
+  selector: 'app-subnavslots',
+  templateUrl: './subnavslots.component.html',
+  styleUrls: ['./subnavslots.component.css']
 })
-export class SubnavComponent {
+export class SubnavslotsComponent {
   constructor(private _router:Router,){};
 
-  dropdown(event: any){
+  dropdownn(event: any){
     console.log(event.target.value)
     this._router.navigate(['/'+event.target.value])
   }

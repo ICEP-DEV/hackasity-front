@@ -19,4 +19,10 @@ export class SityService {
     observe: 'body'
   })
  }
+ 
+ adminRegister (body: any){
+  return this.http.post(this.url + 'secondary/admin/register', body, {
+    observe: 'body'
+  })
+ }
 }

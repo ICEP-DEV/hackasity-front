@@ -17,7 +17,9 @@ import { FilesComponent } from './files/files.component';
 import { ReghackerComponent } from './reghacker/reghacker.component';
 import { RegjudgeComponent } from './regjudge/regjudge.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-import { WhatsonComponent } from './whatson/whatson.component'
+import { WhatsonComponent } from './whatson/whatson.component';
+import { SubnavslotsComponent } from './subnavslots/subnavslots.component';
+import { HackerslotsComponent } from './hackerslots/hackerslots.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { WhatsonComponent } from './whatson/whatson.component'
     RegjudgeComponent,
     LandingpageComponent,
     WhatsonComponent,
+    SubnavslotsComponent,
+    HackerslotsComponent,
     
   ],
   imports: [
@@ -51,6 +55,8 @@ import { WhatsonComponent } from './whatson/whatson.component'
       {path: 'timeslots', component:SlotsComponent},
       {path: 'hacker', component:ReghackerComponent},
       {path: 'judge', component:RegjudgeComponent},
+      {path: 'hackerslots', component:HackerslotsComponent},
+      {path: 'slots', component:SlotsComponent},
 
 
     ])
