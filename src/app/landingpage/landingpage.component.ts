@@ -26,6 +26,21 @@ export class LandingpageComponent {
     }
 
     if (this.role=="hacker"){
+      this.sityservice.hackerlogin(this.loginPage).subscribe((respond) => {
+        console.log(respond)
+        this.sucess = respond
+        if (this.sucess.success == false) {
+          return alert(this.sucess.message)
+        }
+        else{
+          //return alert(this.sucess.message)
+  
+          return this.router.navigate(["/notifications"])
+        }
+  
+      }, (error) => {
+        console.log(error)
+      })
 
     }
 

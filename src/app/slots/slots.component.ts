@@ -17,10 +17,7 @@ export class SlotsComponent {
   timeslot= {
     startTime: "", endTime:"", date: "", judgeid:"", adminid:""
   }
-  // constructor(){}
-  // ngOnInit(): void {
-  //   console.log(12212)
-  // }
+
   addSlot(){
     
        

@@ -25,4 +25,34 @@ export class SityService {
     observe: 'body'
   })
  }
+
+ hackerlogin (body: any){
+  return this.http.post(this.url + 'hacker/login', body, {
+    observe: 'body'
+  })
+ }
+ 
+ hackerRegister (body: any){
+  return this.http.post(this.url + 'hacker/register', body, {
+    observe: 'body'
+  })
+ }
+ judgelogin (body: any){
+  return this.http.post(this.url + 'judges/login', body, {
+    observe: 'body'
+  })
+ }
+ 
+ judgeRegister (body: any){
+  return this.http.post(this.url + 'judges/register', body, {
+    observe: 'body'
+  })
+ }
+
+  uploadFile (body: any){
+  return this.http.post(this.url + 'upload/files', body, {
+    observe: 'body'
+  })
+ }
+ 
 }

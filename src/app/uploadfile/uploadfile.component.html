@@ -1,0 +1,40 @@
+<app-sidenavhacker></app-sidenavhacker>
+<div class="line-2"></div>
+
+<div class="frame-5">
+    <p class="text-1">Files</p>
+    <p class="text-2">Recordings</p>
+</div>
+
+
+
+
+<div class="frame">
+  <table>
+    <thead>
+      <th>Name </th>
+      <th>Date Modified </th>
+      <th>Size </th>
+      <th>Type </th>
+    </thead>
+    <tbody>
+      <tr>
+      <td>{{filename}}</td>
+       <td>{{date}}</td>
+       <td>{{time}}</td>
+      <td>{{size}}</td>
+      <td>{{format}}</td>
+    </tr>
+     
+    </tbody>
+  </table>
+  
+</div>
+
+
+
+<div class="upload-container">
+  <input type="file" id="fileInput" (change)="onFileSelected($event)" >
+  <label for="fileInput" class="upload-button">Upload File</label>
+  <span>{{ selectedFile?.name }}</span>
+</div>
