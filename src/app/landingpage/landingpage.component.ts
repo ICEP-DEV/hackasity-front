@@ -61,14 +61,26 @@ export class LandingpageComponent {
         console.log(error)
       })
     }
+    else if (this.role=="judges"){
+      this.sityservice.judgelogin(this.loginPage).subscribe((respond) => {
+        console.log(respond)
+        this.sucess = respond
+        if (this.sucess.success == false) {
+          return alert(this.sucess.message)
+        }
+        else{
+          //return alert(this.sucess.message)
+  
+          return this.router.navigate(["/scoreboard"])
+        }
+  
+      }, (error) => {
+        console.log(error)
+      })
+    }
     else{
       
     }
-
-
-    
-    
-
 
   }
 

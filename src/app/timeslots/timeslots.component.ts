@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./timeslots.component.css']
 })
 export class TimeslotsComponent {
- toggleValue = false;
+ 
 }

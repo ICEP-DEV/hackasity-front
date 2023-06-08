@@ -10,12 +10,23 @@ import { Router } from '@angular/router';
 })
 export class UploadfileComponent {
 
-  selectedFile: File | undefined;
+  selectedFile: any;
 
- 
+  filename: any
+  size: any
+  date: any
+  time: any
+  format: any
 
   constructor(private _router:Router,private sityservice: SityService ){};
+  ngOnInit() {
+    this.filename=localStorage.getItem("Filename")
+    this.format=localStorage.getItem("format")
+    this.size=localStorage.getItem("size")
 
+    this.time=localStorage.getItem("date")
+
+  }
   uploadFile= {
     filename: "",
     size:"",
@@ -24,11 +35,7 @@ export class UploadfileComponent {
     format:"",
   }
 
-  filename: any
-  size: any
-  date: any
-  time: any
-  format: any
+
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
@@ -44,15 +51,21 @@ export class UploadfileComponent {
     var yyyy=date.getFullYear()
     this.time=dd+"/"+mm+"/"+yyyy
 
+    let formdata = new FormData()
+    formdata.append("filename",this.selectedFile)
     this.size = Number (this.selectedFile?.size)/1000+"kb"
     var file={
       filename:this.selectedFile
     }
 
-    console.log(this.selectedFile)
+    localStorage.setItem("Filename",this.filename)
+    localStorage.setItem("format",this.format)
+    localStorage.setItem("size",this.size)
+    localStorage.setItem("date",this.time)
 
-    
-    this.sityservice.uploadFile(this.selectedFile?.name).subscribe((respond)=>{
+
+
+    this.sityservice.uploadFile(formdata).subscribe((respond)=>{
       console.log(respond)
     },error=>{
       console.log(error)
@@ -61,6 +74,22 @@ export class UploadfileComponent {
 
   submit(){
 
+  }
+
+
+  selectedFiles: File | null = null;
+
+  onFileSelecteds(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+
+  upload() {
+    if (this.selectedFile) {
+      // Perform the upload logic here
+      console.log('Uploading file:', this.selectedFile);
+    } else {
+      console.log('No file selected!');
+    }
   }
   
  

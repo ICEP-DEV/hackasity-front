@@ -24,7 +24,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { SidenavhackerComponent } from './sidenavhacker/sidenavhacker.component';
 import { UploadfileComponent } from './uploadfile/uploadfile.component';
 import { TeamsComponent } from './teams/teams.component';
-import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.component'
+import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.component';
+import { RecordingComponent } from './recording/recording.component';
+import { JscoreboardComponent } from './jscoreboard/jscoreboard.component'
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.compone
     UploadfileComponent,
     TeamsComponent,
     HackertimeslotComponent,
+    RecordingComponent,
+    JscoreboardComponent,
     
   ],
   imports: [
@@ -72,6 +76,7 @@ import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.compone
       {path:'uploadfile', component:UploadfileComponent},
       {path:'teams', component:TeamsComponent},
       {path:'hackertimeslot', component:HackertimeslotComponent},
+      {path:'scoreboard', component:JscoreboardComponent},
 
 
     ])

@@ -7,6 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./slots.component.css']
 })
 export class SlotsComponent {
+  timeslot=["00:00 AM","01:00 AM","02:00 AM","03:00 AM", "04:00 AM","05:00 AM", "06:00 AM","07:00 AM",
+  "08:00 AM","09:00 AM","10:00 AM","11:00 AM", "12:00 AM", "13:00 PM","14:00 PM", "15:00 PM", "16:00 PM", "17:00 PM",
+  "18:00 PM", "19:00 PM", "20:00 PM","21:00 PM","22:00 PM","23:00 PM"
+]
+
+timeslotE=["00:00 AM","01:00 AM","02:00 AM","03:00 AM", "04:00 AM","05:00 AM", "06:00 AM","07:00 AM",
+  "08:00 AM","09:00 AM","10:00 AM","11:00 AM", "12:00 AM", "13:00 PM","14:00 PM", "15:00 PM", "16:00 PM", "17:00 PM",
+  "18:00 PM", "19:00 PM", "20:00 PM","21:00 PM","22:00 PM","23:00 PM"
+]
   constructor(private _router:Router,private sityservice: SityService){};
 
   dropdown(event: any){
@@ -14,12 +23,32 @@ export class SlotsComponent {
     this._router.navigate(['/'+event.target.value])
   }
 
-  timeslot= {
-    startTime: "", endTime:"", date: "", judgeid:"", adminid:""
+  slot= {
+    startTime: "", endTime:"", date: "", judgeid:"1", adminid:"1", length:"1"
+  }
+
+  onChangeStartTime(event:any){
+    console.log(event.target.value)
+    this.slot.startTime=event.target.value
+  }
+
+  onChangeendTime(event:any){
+    console.log(event.target.value)
+    this.slot.endTime=event.target.value
+  }
+  onChangeDate(event:any){
+    console.log(event.target.value)
+    this.slot.date=event.target.value
   }
 
   addSlot(){
+    console.log(this.slot)
     
+    this.sityservice.judgeSlot(this.slot).subscribe((respond)=>{
+      console.log(respond)
+    },(error)=>{
+      console.log(error)
+    })
        
   }
 

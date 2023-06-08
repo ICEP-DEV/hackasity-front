@@ -55,4 +55,15 @@ export class SityService {
   })
  }
  
+ hackerSlot (body: any){
+  return this.http.post(this.url + 'hackers', body, {
+    observe: 'body'
+  })
+ }
+
+ judgeSlot (body: any){
+  return this.http.post(this.url +'judges', body, {
+    observe: 'body'
+  })
+ }
 }
