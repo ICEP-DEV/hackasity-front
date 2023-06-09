@@ -15,7 +15,7 @@ export class SityService {
     })
   }
  adminlogin (body: any){
-  return this.http.post(this.url + 'secondary/admin/login', body, {
+  return this.http.post(this.url + 'admin/login', body, {
     observe: 'body'
   })
  }
@@ -31,7 +31,6 @@ export class SityService {
     observe: 'body'
   })
  }
- 
  hackerRegister (body: any){
   return this.http.post(this.url + 'hacker/register', body, {
     observe: 'body'
