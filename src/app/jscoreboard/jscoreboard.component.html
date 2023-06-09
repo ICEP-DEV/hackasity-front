@@ -1,2 +1,42 @@
 <app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
 
+
+<section class="container">
+    <div class="img"><img src=""></div>
+    <div class="grp-name">
+      <h2> Team Name </h2>
+    </div>
+    <table>
+      <caption>Scoring</caption>
+      <thead>
+        <tr>
+          <th>Novelity 15%</th>
+          <th>Usefulness 20%</th>
+          <th>Technical proficiency 10%</th>
+          <th>Impact 25%</th>
+          <th>Safety 10%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="input1" required class="txt-input"></td>
+          <td><input type="text" name="input2" required class="txt-input"></td>
+          <td><input type="text" name="input3" required class="txt-input"></td>
+          <td><input type="text" name="input4" required class="txt-input"></td>
+          <td><input type="text" name="input5" required class="txt-input"></td>
+        </tr>
+      </tbody>
+      <div class="score-container">
+        <label class="score-txt">Final Score</label>
+        <input type="text" class="score" readonly>
+        <label class="total-score">/100</label>
+      </div>
+
+      <div class="optional">
+        <label class="label-txt">Reasons(optional)</label>
+        <input type="text" name="input6" class="optional-txt">
+        <button>Submit</button>
+      </div>
+    </table>
+  </section>

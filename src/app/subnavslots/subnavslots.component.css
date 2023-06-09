@@ -1,4 +1,4 @@
-.rectangle-5 {
+/* .rectangle-5 {
     height: 150px;
     width: 91%;
     background-color: #dfe0e2;
@@ -6,7 +6,7 @@
     margin-left: 130px;
     padding-left: 50px;
     
-  }
+  } */
   .navbar {
     height: 46px;
     width: 471px;
@@ -22,7 +22,7 @@
     font-weight: bold;
   }
   .line-2 {
-    width:100%;
+    width:80%;
     text-align:left;
     margin-left:0;
   }
@@ -37,4 +37,25 @@
     margin-left: 9.5%;
     margin-top: 1%;
     font-weight: bold;
+  }
+
+  .drp-down{  
+        border: none;
+        font-size: 20px;
+        padding: 8px;
+        margin-left: 50px;
+        border-radius: 5px;
+  }
+
+  .nav-inside{
+         margin-left: 130px;
+        width: 93.7%;
+        height: 80px;
+        background-color: #dfe0e2;
+        margin-top: -46px;
+        padding-top:30px;
+        margin-right: 0px;
+  }
+  .hr-line{
+    margin-top:38px
   }

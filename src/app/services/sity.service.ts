@@ -37,7 +37,7 @@ export class SityService {
   })
  }
  judgelogin (body: any){
-  return this.http.post(this.url + 'judges/login', body, {
+  return this.http.post(this.url + 'judge/login', body, {
     observe: 'body'
   })
  }
