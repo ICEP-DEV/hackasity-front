@@ -65,4 +65,14 @@ export class SityService {
     observe: 'body'
   })
  }
+
+  teamPoints (body: any){
+  return this.http.post(this.url +'team/points', body, {
+    observe: 'body'
+  })
+ }
+ getTeamsNames() {
+  // Make an HTTP request to retrieve group names from the backend
+  return this.http.get(this.url +'team');
+}
 }

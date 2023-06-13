@@ -20,6 +20,7 @@ export class LandingpageComponent {
 
   }
 
+  
   button() {
     if (this.loginPage.password == "" || this.loginPage.email == "" || this.role == "") {
       return alert("Field must be filled")

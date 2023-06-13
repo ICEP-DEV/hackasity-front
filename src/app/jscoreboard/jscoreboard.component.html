@@ -1,11 +1,17 @@
 <app-navbar></app-navbar>
-<app-sidenav></app-sidenav>
+<!-- <app-sidenav></app-sidenav> -->
 
+<div class="side-nav">
 
+</div>
 <section class="container">
     <div class="img"><img src=""></div>
     <div class="grp-name">
-      <h2> Team Name </h2>
+      <p  value="#"> Choose A Team</p>
+      <select class="drp-down" [(ngModel)]="score.group_name" > 
+    
+         <option value="{{d.group_name}}"  *ngFor= "let d of selectedGroup" >{{d.group_name}}</option>
+       </select>
     </div>
     <table>
       <caption>Scoring</caption>
@@ -13,30 +19,33 @@
         <tr>
           <th>Novelity 15%</th>
           <th>Usefulness 20%</th>
-          <th>Technical proficiency 10%</th>
+          <th>Feasibility 15%</th>
+          <th>Technical proficiency 15%</th>
           <th>Impact 25%</th>
           <th>Safety 10%</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><input type="text" name="input1" required class="txt-input"></td>
-          <td><input type="text" name="input2" required class="txt-input"></td>
-          <td><input type="text" name="input3" required class="txt-input"></td>
-          <td><input type="text" name="input4" required class="txt-input"></td>
-          <td><input type="text" name="input5" required class="txt-input"></td>
+          <td><input type="number" name="NovelityScore" [(ngModel)]="noverlity" (change)="getNovScore($event)"  class="txt-input"></td>
+          <td><input type="number" name="UsefulScore"  [(ngModel)]="usefulness" (change)="getUsefulnesScore($event)"  class="txt-input"></td>
+          <td><input type="number" name="FeasibilityScore" [(ngModel)]="Feasib" (change)="getFeasibilityScore($event)"  class="txt-input"></td>
+          <td><input type="number" name="TechScore" [(ngModel)]="tech" (change)="getTechScore($event)" class="txt-input"></td>
+          <td><input type="number" name="impactScore"  [(ngModel)]="impactScore" (change)="getImactScore($event)" class="txt-input"></td> 
+          <td><input type="number" name="SafetyScore" [(ngModel)]="Safety" (change)="getSafetyScore($event)" class="txt-input"></td>
+         
         </tr>
       </tbody>
       <div class="score-container">
         <label class="score-txt">Final Score</label>
-        <input type="text" class="score" readonly>
-        <label class="total-score">/100</label>
+        <input type="text" class="score" value="{{totalPoints}}" [(ngModel)]="score.points" readonly>
+        <label class="total-score" >%</label>
       </div>
 
       <div class="optional">
         <label class="label-txt">Reasons(optional)</label>
         <input type="text" name="input6" class="optional-txt">
-        <button>Submit</button>
+        <button (click)="addPoints()" type="submit">Submit </button>
       </div>
     </table>
   </section>

@@ -1,9 +1,7 @@
 .side-nav {
     position: absolute;
-    top: 95px;
-    left: 0;
-    bottom: 0;
-    width: 100px;
+    margin-top: 200px;
+    width: 80px;
     background-color: rgba(19,49,124,0.21);
     padding: 20px;
     height: 785px;
