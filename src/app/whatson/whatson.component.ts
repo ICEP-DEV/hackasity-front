@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-whatson',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./whatson.component.css']
 })
 export class WhatsonComponent {
-
+  @Input() name: any;
 }

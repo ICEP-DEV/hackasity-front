@@ -26,7 +26,9 @@ import { UploadfileComponent } from './uploadfile/uploadfile.component';
 import { TeamsComponent } from './teams/teams.component';
 import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.component';
 import { RecordingComponent } from './recording/recording.component';
-import { JscoreboardComponent } from './jscoreboard/jscoreboard.component'
+import { JscoreboardComponent } from './jscoreboard/jscoreboard.component';
+import { JudgesidenavComponent } from './judgesidenav/judgesidenav.component';
+import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.component'
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { JscoreboardComponent } from './jscoreboard/jscoreboard.component'
     HackertimeslotComponent,
     RecordingComponent,
     JscoreboardComponent,
+    JudgesidenavComponent,
+    JudgeslotdisplayComponent,
     
   ],
   imports: [
@@ -77,6 +81,7 @@ import { JscoreboardComponent } from './jscoreboard/jscoreboard.component'
       {path:'teams', component:TeamsComponent},
       {path:'hackertimeslot', component:HackertimeslotComponent},
       {path:'scoreboard', component:JscoreboardComponent},
+      {path:'slotdisplay', component:JudgeslotdisplayComponent},
 
 
     ])

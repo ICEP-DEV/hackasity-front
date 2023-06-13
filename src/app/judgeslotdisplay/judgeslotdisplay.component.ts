@@ -3,22 +3,22 @@ import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-hackertimeslot',
-  templateUrl: './hackertimeslot.component.html',
-  styleUrls: ['./hackertimeslot.component.css']
+  selector: 'app-judgeslotdisplay',
+  templateUrl: './judgeslotdisplay.component.html',
+  styleUrls: ['./judgeslotdisplay.component.css']
 })
-export class HackertimeslotComponent {
+export class JudgeslotdisplayComponent {
 
   constructor(private _router:Router,private sityservice: SityService){};
   ngOnInit() {
-    this.slot()
+    this.judgeslot()
   }
 
   temp:any
 table:any
 
-  slot(){
-    this.sityservice.hackerSlotget().subscribe((respond) => {
+  judgeslot(){
+    this.sityservice.judgeSlotget().subscribe((respond) => {
       this.temp=respond
       this.table=this.temp.results
    

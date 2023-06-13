@@ -1,0 +1,19 @@
+.message-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+ 
+  }
+  
+
+  
+  .message {
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .name {
+    font-weight: bold;
+  }

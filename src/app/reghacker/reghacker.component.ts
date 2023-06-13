@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 export class ReghackerComponent {
 
   hackerRegister= {
-    studentNo: "",
+    stu_no: "",
     stu_name:"",
     stu_surname: "",
-    studentEmail: "",
-    groupName : "",
-    studentPassword:"",
+    stu_email: "",
+    group_name : "",
+    stu_password:"",
     passwordConfirm:"",
 
   }

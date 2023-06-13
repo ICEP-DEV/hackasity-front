@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<app-judgesidenav></app-judgesidenav>
+
+<div class="frame">
+    <table id="display">
+        <thead>
+            <th>Judge(s) names</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hacker of table">
+                <td>{{hacker.Judge_name}}</td>
+                <td>{{hacker.start_time}}</td>
+                <td>{{hacker.end_time}}</td>
+                <td>{{hacker.date}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

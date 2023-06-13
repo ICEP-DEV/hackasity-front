@@ -66,7 +66,7 @@ export class LandingpageComponent {
         console.log(respond)
         this.sucess = respond
         if (this.sucess.success == false) {
-          return alert(this.sucess.message)
+          return // alert(this.sucess.message)
         }
         else{
           //return alert(this.sucess.message)

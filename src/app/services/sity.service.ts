@@ -15,13 +15,13 @@ export class SityService {
     })
   }
  adminlogin (body: any){
-  return this.http.post(this.url + 'secondary/admin/login', body, {
+  return this.http.post(this.url + 'admin/login', body, {
     observe: 'body'
   })
  }
  
  adminRegister (body: any){
-  return this.http.post(this.url + 'secondary/admin/register', body, {
+  return this.http.post(this.url + 'admin/registration', body, {
     observe: 'body'
   })
  }
@@ -33,18 +33,18 @@ export class SityService {
  }
  
  hackerRegister (body: any){
-  return this.http.post(this.url + 'hacker/register', body, {
+  return this.http.post(this.url + 'hacker/registration', body, {
     observe: 'body'
   })
  }
  judgelogin (body: any){
-  return this.http.post(this.url + 'judges/login', body, {
+  return this.http.post(this.url + 'judge/login', body, {
     observe: 'body'
   })
  }
  
  judgeRegister (body: any){
-  return this.http.post(this.url + 'judges/register', body, {
+  return this.http.post(this.url + 'judge/registration', body, {
     observe: 'body'
   })
  }
@@ -56,14 +56,22 @@ export class SityService {
  }
  
  hackerSlot (body: any){
-  return this.http.post(this.url + 'hackers', body, {
+  return this.http.post(this.url + 'hacker/slot', body, {
     observe: 'body'
   })
  }
 
  judgeSlot (body: any){
-  return this.http.post(this.url +'judges', body, {
+  return this.http.post(this.url +'judge/slot', body, {
     observe: 'body'
   })
+ }
+
+ judgeSlotget(){
+  return this.http.get(this.url +'judge/slot')
+ }
+
+ hackerSlotget(){
+  return this.http.get(this.url +'hacker/slot')
  }
 }

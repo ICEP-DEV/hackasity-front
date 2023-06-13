@@ -9,11 +9,12 @@ import { SityService} from '../services/sity.service'
 })
 export class FilesComponent {
   adminRegister= {
-    secAdmin_id: "",
+
     name:"",
     surname: "",
     email: "",
-    password : ""
+    password : "",
+    passwordConfirm:""
   }
   constructor(private _router:Router,private sityservice: SityService ){};
 

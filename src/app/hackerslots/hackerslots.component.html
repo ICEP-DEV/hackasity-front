@@ -9,68 +9,25 @@
     
     <label>Admin</label>
    
-    <input type="date" id="title" name="title" placeholder="" >
+    <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)">
   </div>
  
   <div class="input-row">
-    
-    <select style="display: inline-block; ">
-      <option value="00:00 AM">00:00 AM</option>
-      <option value="01:00 AM">01:00 AM</option>
-      <option value="02:00 AM">02:00 AM</option>
-      <option value="03:00 AM">03:00 AM</option>
-      <option value="04:00 AM">04:00 AM</option>
-      <option value="05:00 AM">05:00 AM</option>
-      <option value="06:00 AM">06:00 AM</option>
-      <option value="07:00 AM">07:00 AM</option>
-      <option value="08:00 AM">08:00 AM</option>
-      <option value="09:00 AM">09:00 AM</option>
-      <option value="10:00 AM">10:00 AM</option>
-      <option value="11:00 AM">11:00 AM</option>
-      <option value="12:00 AM">12:00 AM</option>
-      <option value="13:00 PM">13:00 PM</option>
-      <option value="14:00 PM">14:00 PM</option>
-      <option value="15:00 PM">15:00 PM</option>
-      <option value="16:00 PM">16:00 PM</option>
-      <option value="17:00 PM">17:00 PM</option>
-      <option value="18:00 PM">18:00 PM</option>
-      <option value="19:00 PM">19:00 PM</option>
-      <option value="20:00 PM">20:00 PM</option>
-      <option value="21:00 PM">21:00 PM</option>
-      <option value="2:00 PM">22:00 PM</option>
-      <option value="23:00 PM">23:00 PM</option>
+    <!-- <select style="display: inline-block; " (change)="onChangeStartTime($event)">
+      <option *ngFor="let time of timeslot" value="{{time}}">{{time}}</option>
     </select>
    
-    <select style="display: inline-block; width: 20%;">
-      <option value="">00:00 AM</option>
-      <option value="">01:00 AM</option>
-      <option value="">02:00 AM</option>
-      <option value="">03:00 AM</option>
-      <option value="">04:00 AM</option>
-      <option value="">05:00 AM</option>
-      <option value="">06:00 AM</option>
-      <option value="">07:00 AM</option>
-      <option value="">08:00 AM</option>
-      <option value="">09:00 AM</option>
-      <option value="">10:00 AM</option>
-      <option value="">11:00 AM</option>
-      <option value="">12:00 AM</option>
-      <option value="">13:00 PM</option>
-      <option value="">14:00 PM</option>
-      <option value="">15:00 PM</option>
-      <option value="">16:00 PM</option>
-      <option value="">17:00 PM</option>
-      <option value="">18:00 PM</option>
-      <option value="">19:00 PM</option>
-      <option value="">20:00 PM</option>
-      <option value="">21:00 PM</option>
-      <option value="">22:00 PM</option>
-      <option value="">23:00 PM</option>
-    </select>
+    <select style="display: inline-block; width: 20%;" (change)="onChangeendTime($event)">
+      <option *ngFor="let time of timeslot" value="{{time}}">{{time}}</option>
+    </select> -->
+    <input type="text" id="group" name="group" placeholder="" required [(ngModel)]="slot.start_time" name="slot.start_time" >
+    <input type="text" id="group" name="group" placeholder="" required [(ngModel)]="slot.end_time" name="slot.end_time" >
+    
   </div>
+
   <div class="input">
     <label>Group name</label>
-    <input type="text" id="group" name="group" placeholder="" >
+    <input type="text" id="group" name="group" placeholder=""  required [(ngModel)]="slot.group_name" name="slot.group_name">
   </div>
   <div class="text-1">Date of Event </div>
   <div class="text-2">Time Range</div>
