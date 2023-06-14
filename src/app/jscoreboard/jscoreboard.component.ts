@@ -8,6 +8,8 @@ import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
   styleUrls: ['./jscoreboard.component.css']
 })
 export class JscoreboardComponent {
+
+  dataToPost:any;
    //Scoring Percentages
    techPer = 0.15
    impactPerc = 0.25
@@ -32,13 +34,14 @@ export class JscoreboardComponent {
     Feasib: 0
    }
    totalPoints = 0;
-
+   
    selectedGroup: any;
  
   constructor(private _router:Router,private sityservice: SityService ){};
 
   ngOnInit(){
     this.getGroupNames()
+  
 
   }
        temp:any
@@ -53,17 +56,17 @@ export class JscoreboardComponent {
   }
 
   score={
-    group_id:"",
     group_name:"",
-    points:""
+    points: ""
   }
-
-  
-
-     
 
   getImactScore(impact:any){
    this.gettotalScore.impactScore = Number(impact.target.value)
+   if(this.gettotalScore.impactScore >100){
+    alert("enter numb less than 100")
+    this.impactScore = 0
+    return
+   }
    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
@@ -105,11 +108,11 @@ export class JscoreboardComponent {
     console.log(this.score)
 
 
-    this.sityservice.teamPoints(this.score).subscribe((respond)=>{console.log(respond)},
-    (error)=>{
-      console.log(error)
-    }
-    )
+    // this.sityservice.teamPoints(this.score).subscribe((respond)=>{console.log(respond)},
+    // (error)=>{
+    //   console.log(error)
+    // }
+    // )
 
   }
 
@@ -120,16 +123,19 @@ export class JscoreboardComponent {
     const points = (document.getElementById('finalScore') as HTMLInputElement).value;
   console.log(points);
   // Create the data object to be sent in the POST request
-  const data = {
-    points
-  };
+  // const data = {
+  //   group_name:,
+  //   points:this.totalPoints
+  // };
+  this.score.points =this.totalPoints.toString()
+  console.log(this.score)
   // Make a POST request to the API endpoint with the evaluation data
   fetch('http://localhost:3000/team/points', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(this.score)
   })
     .then(response => response.json())
     .then(result => {
@@ -142,6 +148,15 @@ export class JscoreboardComponent {
     });
 }
 
+// post(){
+//   const points = (document.getElementById('finalScore') as HTMLInputElement).value;
+//   let point = Number(points)
+//   console.log(points);
+//   this.sityservice.teamPoints(point,this.dataToPost).subscribe((res)=>{
+//     console.log(res);
+
+//   })
+// }
  
 
 }
