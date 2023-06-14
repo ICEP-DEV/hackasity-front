@@ -7,13 +7,12 @@
 <section class="container">
     <div class="img"><img src=""></div>
     <div class="grp-name">
-      <p  value="#"> Choose A Team</p>
-      <select class="drp-down" [(ngModel)]="score.group_name" > 
-    
+      <p value="#"> Choose A Team </p>
+      <select class="drp-down" [(ngModel)]="score.group_name" >  
          <option value="{{d.group_name}}"  *ngFor= "let d of selectedGroup" >{{d.group_name}}</option>
        </select>
     </div>
-    <table>
+    <table >
       <caption>Scoring</caption>
       <thead>
         <tr>
@@ -36,16 +35,16 @@
          
         </tr>
       </tbody>
-      <div class="score-container">
+      <div class="score-container" >
         <label class="score-txt">Final Score</label>
-        <input type="text" class="score" value="{{totalPoints}}" [(ngModel)]="score.points" readonly>
-        <label class="total-score" >%</label>
+        <input type="text" id="finalScore" class="scores" name="points" value="{{totalPoints}}" [(ngModel)]="score.points" readonly>
+        <label class="total-score">%</label>
       </div>
 
       <div class="optional">
         <label class="label-txt">Reasons(optional)</label>
         <input type="text" name="input6" class="optional-txt">
-        <button (click)="addPoints()" type="submit">Submit </button>
+        <button type="submit" (click)="addPoints()" (click)="groupPoints()">Submit</button>
       </div>
     </table>
   </section>

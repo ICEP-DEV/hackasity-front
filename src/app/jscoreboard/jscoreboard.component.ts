@@ -33,7 +33,6 @@ export class JscoreboardComponent {
    }
    totalPoints = 0;
 
-   groupNames: string[] = [];
    selectedGroup: any;
  
   constructor(private _router:Router,private sityservice: SityService ){};
@@ -54,11 +53,14 @@ export class JscoreboardComponent {
   }
 
   score={
+    group_id:"",
     group_name:"",
     points:""
   }
-     
 
+  
+
+     
 
   getImactScore(impact:any){
    this.gettotalScore.impactScore = Number(impact.target.value)
@@ -110,6 +112,36 @@ export class JscoreboardComponent {
     )
 
   }
+
+
+  // Process the query or navigate to the Submit Query page
+
+  groupPoints(){
+    const points = (document.getElementById('finalScore') as HTMLInputElement).value;
+  console.log(points);
+  // Create the data object to be sent in the POST request
+  const data = {
+    points
+  };
+  // Make a POST request to the API endpoint with the evaluation data
+  fetch('http://localhost:3000/team/points', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => response.json())
+    .then(result => {
+      // Handle the response from the server
+      console.log(result);
+    })
+    .catch(error => {
+      // Handle any errors that occurred during the request
+      console.error('Error:', error);
+    });
+}
+
  
 
 }

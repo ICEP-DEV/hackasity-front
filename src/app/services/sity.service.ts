@@ -75,4 +75,5 @@ export class SityService {
   // Make an HTTP request to retrieve group names from the backend
   return this.http.get(this.url +'team');
 }
+
 }
