@@ -10,22 +10,24 @@ export class SidenavComponent {
   
   constructor(private _router: Router) { }
 
-  navigateToReport(){
-    this._router.navigate(['/report'])
-  }
-  navigateToFiles(){
-    this._router.navigate(['/files'])
-  }
-
-  navigateSlot(){
-    this._router.navigate(['/slots'])
-  }
   navigateToWhatsOn(){
     this._router.navigate(['/whatson'])
   }
 
-  navigateToRegisterUsers(){
-    this._router.navigate(['/registerusers'])
+  navigateToScoreboard(){
+    this._router.navigate(['/scoreboard'])
+  }
+
+  navigateSlot(){
+    this._router.navigate(['/jslot'])
+  }
+
+  navigateToFiles(){
+    this._router.navigate(['/files'])
+  }
+
+  navigateToLanding(){
+    this._router.navigate(['/landingpage'])
   }
 
 }

@@ -1,14 +1,12 @@
 <app-navbar></app-navbar>
 <app-sidenav></app-sidenav>
 
-<!-- <div class="side-nav">
-
-</div> -->
 <section class="container">
     <div class="img"><img src=""></div>
     <div class="grp-name">
-      <p value="#"> Choose A Team </p>
-      <select class="drp-down" [(ngModel)]="score.group_name" >  
+      <!-- <p class="chose-label"> Choose A Team </p> -->
+      <select class="drp-down" [(ngModel)]="score.group_name" >
+        <option value="">Choose A Team</option>  
          <option value="{{d.group_name}}"  *ngFor= "let d of selectedGroup" >{{d.group_name}}</option>
        </select>
     </div>                                                                                        
@@ -44,7 +42,7 @@
       <div class="optional">
         <label class="label-txt">Reasons(optional)</label>
         <input type="text" name="input6" class="optional-txt">
-        <button type="submit" (click)="addPoints()" (click)="groupPoints()">Submit</button>
+        <button type="submit" (click)="groupPoints()">Submit</button>
       </div>
     </table>
   </section>

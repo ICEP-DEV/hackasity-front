@@ -15,5 +15,83 @@
     color: rgb(0, 0, 0);
     padding: 20px;
  }
+ .time-slot{
+    margin-left:-14px;
+ }
+ .what-on{
+   margin-left:-10px;
+ }
  
-  
+.logout{
+   text-align: center;
+   margin-top: 270px;
+}
+a:visited {
+   color: green;
+ }
+.notification:hover{
+   background-color: #EC7A7A; 
+   
+}
+
+.file-upload:hover{
+   background-color: #EC7A7A;
+   
+}  
+
+.timeslot:hover{
+   background-color: #EC7A7A; 
+   
+}
+
+.scoring:hover{
+   background-color: #EC7A7A; 
+   
+}
+.scoring:active{
+   background-color: #EC7A7A; 
+   
+}
+
+.logout:hover{
+   background-color: #EC7A7A; 
+
+}
+img{ 
+   display: inline-block;
+   width: 30px;
+   height: 25px;
+   transform: rotate(180deg)
+
+ }
+ .img2{
+   display: inline-block;
+   transform: rotate(-90deg);
+    width: 36px;
+    background-size: 100%;
+
+ }
+ .img3{
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   transform: rotate(360deg);
+ }
+ .img4{
+   display: inline-block;
+   width: 32px;
+   height: 41px;
+   transform: rotate(360deg);
+ }
+ .img5{
+   display: inline-block;
+   width: 32px;
+   height: 30px;
+   transform: rotate(-345deg);
+ }
+
+ .img1{
+   display: inline-block;
+   width: 28px;
+   height: 28px;
+ }

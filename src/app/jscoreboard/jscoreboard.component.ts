@@ -9,15 +9,6 @@ import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 })
 export class JscoreboardComponent {
 
-  dataToPost:any;
-   //Scoring Percentages
-   techPer = 0.15
-   impactPerc = 0.25
-   novelityPer = 0.15
-   feabPer = 0.15
-   usefulnesPer = 0.20
-   safePerc = 0.10
-
    impactScore = 0
    noverlity=0
    usefulness=0
@@ -34,10 +25,14 @@ export class JscoreboardComponent {
     Feasib: 0
    }
    totalPoints = 0;
-   
+
    selectedGroup: any;
  
   constructor(private _router:Router,private sityservice: SityService ){};
+
+  onHacker(judge : string){
+    this._router.navigate(['/'+judge])
+  }
 
   ngOnInit(){
     this.getGroupNames()
@@ -67,55 +62,72 @@ export class JscoreboardComponent {
     this.impactScore = 0
     return
    }
-   this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+   this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
 
   getNovScore(novelity:any){
     this.gettotalScore.noverlity = Number(novelity.target.value)
-    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+    if(this.gettotalScore.noverlity > 100){
+      alert("enter numb less than 100")
+      this.noverlity = 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
   getTechScore(techP:any){
     this.gettotalScore.tech = Number(techP.target.value)
-    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+    if(this.gettotalScore.tech > 100){
+      alert("enter numb less than 100")
+      this.tech = 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
   getFeasibilityScore(fea:any){
     this.gettotalScore.Feasib = Number(fea.target.value)
-    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+    if(this.gettotalScore.Feasib > 100){
+      alert("enter numb less than 100")
+      this.Feasib= 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
   getUsefulnesScore(usefulnes:any){
     this.gettotalScore.usefulness = Number(usefulnes.target.value)
-    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+    if(this.gettotalScore.usefulness > 100){
+      alert("enter numb less than 100")
+      this.usefulness = 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
   getSafetyScore(safety:any){
     this.gettotalScore.Safety = Number(safety.target.value)
-    this.totalPoints = this.gettotalScore.impactScore* this.impactPerc
+    if(this.gettotalScore.Safety > 100){
+      alert("enter numb less than 100")
+      this.Safety = 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore*(0.25)
     +  this.gettotalScore.noverlity*(0.15) + this.gettotalScore.usefulness*(0.20) + 
    this.gettotalScore.tech*(0.15) + this.gettotalScore.Safety*(0.10) + this.gettotalScore.Feasib*(0.15)
   }
      
-
-  addPoints(){
-    console.log(this.score)
-
-
-    // this.sityservice.teamPoints(this.score).subscribe((respond)=>{console.log(respond)},
-    // (error)=>{
-    //   console.log(error)
-    // }
-    // )
-
-  }
-
 
   // Process the query or navigate to the Submit Query page
 
@@ -123,10 +135,7 @@ export class JscoreboardComponent {
     const points = (document.getElementById('finalScore') as HTMLInputElement).value;
   console.log(points);
   // Create the data object to be sent in the POST request
-  // const data = {
-  //   group_name:,
-  //   points:this.totalPoints
-  // };
+
   this.score.points =this.totalPoints.toString()
   console.log(this.score)
   // Make a POST request to the API endpoint with the evaluation data
@@ -147,16 +156,5 @@ export class JscoreboardComponent {
       console.error('Error:', error);
     });
 }
-
-// post(){
-//   const points = (document.getElementById('finalScore') as HTMLInputElement).value;
-//   let point = Number(points)
-//   console.log(points);
-//   this.sityservice.teamPoints(point,this.dataToPost).subscribe((res)=>{
-//     console.log(res);
-
-//   })
-// }
- 
 
 }

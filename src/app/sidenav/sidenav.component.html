@@ -1,24 +1,32 @@
 
 <div class="side-nav">
 
-   <a (click)="navigateToWhatsOn()">
-      <p>What's on?</p>
+   <a (click)="navigateToWhatsOn()" class="notification">
+      <img src="../../assets/icons8-notification-50.png" class="img5">
+      <div class="what-on">
+      <span>Activity</span>
+   </div>
    </a>
 
-   <!-- <a  routerLink="files" > -->
-   <a (click)="navigateToFiles()">
-     
-      <span>Register users</span>
+   <a (click)="navigateToScoreboard()" class="scoring">
+      <img src="../../assets/icons8-scoreboard-80.png" class="img4">
+     <span>Score</span>
    </a>
 
-   <!-- <a  routerLink="timeslots" > -->
-   <a (click)="navigateSlot()">
-      <span>TimeSlot</span>
+   <a (click)="navigateSlot()" class="timeslot">
+      <img src="../../assets/icons8-time-limit-50.png" class="img3">
+      <div class="time-slot">
+      <span >TimeSlot</span>
+   </div>
    </a>
 
-   <!-- <a  routerLink="report" > -->
-   <a (click)="navigateToReport()">
-      
-      <span>Report</span>
+   <a (click)="  navigateToFiles()" class="file-upload">
+
+      <span>Files</span>
+   </a>
+
+   <a (click)=" navigateToLanding()" class="logout">
+      <img src="../../assets/icons8-logout-50.png" class="img1">
+      <span>Logout</span>
    </a>
 </div>
