@@ -1,6 +1,6 @@
 .rectangle-5 {
     height: 150px;
-    width: 91%;
+    width: 92.8%;
     background-color: #dfe0e2;
     margin-top: 1px;
     margin-left: 130px;
@@ -39,4 +39,6 @@
     font-weight: bold;
   }
   
-  
+  .input-row{
+    margin-top: -0.5%;
+  }

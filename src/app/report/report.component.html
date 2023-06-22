@@ -2,74 +2,53 @@
 <!-- <app-subnav></app-subnav> -->
 <app-sidenav></app-sidenav>
 
-<div class="rectangle-5">
-  <div class="navbar">
-        <!-- <a href="#">
-        <svg width="40px" viewBox="0 0 512 512" 
-        version="1.1" 
-        xmlns="http://www.w3.org/2000/svg" 
-        xmlns:xlink="http://www.w3.org/1999/xlink" 
-        fill="#000000">
-            <g id="SVGRepo_bgCarrier" 
-            stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
-                <title>report-barchart</title> 
-                <g id="Page-1" 
-                stroke="none" 
-                stroke-width="1" fill="none" fill-rule="evenodd"> 
-                <g id="add" 
-                fill="#000000" 
-                transform="translate(42.666667, 85.333333)"> 
-                <path d="M341.333333,1.42108547e-14 L426.666667,
-                85.3333333 L426.666667,341.333333 L3.55271368e-14,341.333333 L3.55271368e-14,1.42108547e-14 L341.333333,1.42108547e-14 Z 
-                M330.666667,42.6666667 L42.6666667,42.6666667 L42.6666667,298.666667 L384,298.666667 L384,96 L330.666667,42.6666667 Z M106.666667,85.3333333 L106.666,234.666
-                 L341.333333,234.666667 L341.333333,256 L85.3333333,256 L85.3333333,85.3333333 L106.666667,85.3333333 Z M170.666667,149.333333 L170.666667,213.333333 L128,213.333333 
-                 L128,149.333333 L170.666667,149.333333 Z M234.666667,106.666667 L234.666667,213.333333 L192,213.333333 L192,106.666667 L234.666667,106.666667 Z M298.666667,170.666667 
-                 L298.666667,213.333333 L256,213.333333 L256,170.666667 L298.666667,170.666667 Z" 
-                 id="Combined-Shape">
-             </path> </g> </g> </g></svg> -->
-        <p class="text-1">Hack-a-sity Rubric</p>
-    
-      </div>
-   
-      
-</div>
-<div>
-<hr style="width:100%;
-text-align:left;
-margin-left:7%;
-margin-top: -4%;">
-<p class="text-2">Results</p>
 
-<hr style="width:100%;
-text-align:left;
-margin-left:7%;
-margin-top: 1.9%;"></div>
-
-
-<table class="scoring-table">
-    <thead>
-      <tr>
-        <th>Teams</th>
-        <th>Novelity 15%</th>
-        <th>Usability 20%</th>
-        <th>Feasibility 15%</th>
-        <th>Safety 10%</th>
-        <th>Impact 5%</th>
-        <th>Overall score (/100%)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let team of teams">
-        <td>{{ team.name }}</td>
-        <td>{{ team.matches }}</td>
-        <td>{{ team.wins }}</td>
-        <td>{{ team.losses }}</td>
-        <td>{{ team.wins }}</td>
-        <td>{{ team.losses }}</td>
-      
-        <td [ngClass]="{ 'high-score': team.points >= 10 }">{{ team.points }}</td>
-      </tr>
-    </tbody>
-  </table>
   
+<!-- Button trigger modal -->
+<button type="button" class="btn-btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+  View Results
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <table>
+            <thead>
+              <tr>
+                <th>Teams</th>
+                <th>Results</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Morolo Team</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Motloi Team</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Madiba Team</td>
+                <td>60</td>
+              </tr>
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Publish</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
