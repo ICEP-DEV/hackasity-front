@@ -21,7 +21,7 @@ export class SityService {
  }
  
  adminRegister (body: any){
-  return this.http.post(this.url + 'admin/registration', body, {
+  return this.http.post(this.url + 'admin/register', body, {
     observe: 'body'
   })
  }
@@ -74,4 +74,20 @@ export class SityService {
  hackerSlotget(){
   return this.http.get(this.url +'hacker/slot')
  }
+
+ TeamPointsget(){
+  return this.http.get(this.url +'team/points')
+ }
+
+ teamPoints (body: any){
+  return this.http.post(this.url +'team/points', body, {
+    observe: 'body'
+  })
+ }
+ getTeamsNames() {
+  // Make an HTTP request to retrieve group names from the backend
+  return this.http.get(this.url +'team');
+}
+
+
 }
