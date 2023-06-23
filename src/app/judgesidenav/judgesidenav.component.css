@@ -1,13 +1,13 @@
 .side-nav {
     position: absolute;
-    top: 87px;
+    top: 60px;
     left: 0;
     bottom: 0;
-    width: 90px;
+    width: 135px;
     background-color: #6c88cf;
     /* opacity: 21%; */
     padding: 20px;
-    height: 86.2%;
+    height: 93.5%;
     box-shadow: 2px 7px 12px 2px rgba(65,61,61,0.44);
     
 }
@@ -33,6 +33,6 @@ span{
   }
   
   p{
-    margin-left: -20px;
+    margin-left: 5px;
     font-size: 20px;
   }

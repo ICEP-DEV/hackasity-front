@@ -21,6 +21,8 @@ export class JudgesidenavComponent {
   navigateToJudgeSlot(){
     this._router.navigate(['/slotdisplay'])
   }
- 
+  navigateToJudgeReport(){
+    this._router.navigate(['/jreport'])
+  }
 
 }

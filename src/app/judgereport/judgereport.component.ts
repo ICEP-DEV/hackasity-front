@@ -2,15 +2,21 @@ import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-report',
-  templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
-})
-export class ReportComponent {
 
-  
+@Component({
+  selector: 'app-judgereport',
+  templateUrl: './judgereport.component.html',
+  styleUrls: ['./judgereport.component.css']
+})
+export class JudgereportComponent {
   constructor(private _router:Router,private sityservice: SityService){};
+
+  points= {
+    group_name:"",
+    points:""
+  }
+  
+
   ngOnInit() {
     this.point()
   }

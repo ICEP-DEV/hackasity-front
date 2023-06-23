@@ -28,7 +28,8 @@ import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.compone
 import { RecordingComponent } from './recording/recording.component';
 import { JscoreboardComponent } from './jscoreboard/jscoreboard.component';
 import { JudgesidenavComponent } from './judgesidenav/judgesidenav.component';
-import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.component'
+import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.component';
+import { JudgereportComponent } from './judgereport/judgereport.component'
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.c
     JscoreboardComponent,
     JudgesidenavComponent,
     JudgeslotdisplayComponent,
+    JudgereportComponent,
     
   ],
   imports: [
@@ -82,6 +84,8 @@ import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.c
       {path:'hackertimeslot', component:HackertimeslotComponent},
       {path:'scoreboard', component:JscoreboardComponent},
       {path:'slotdisplay', component:JudgeslotdisplayComponent},
+      {path:'jreport', component:JudgereportComponent},
+
 
 
     ])

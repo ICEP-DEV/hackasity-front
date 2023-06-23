@@ -7,7 +7,7 @@
     <div class="grp-name">
       <!-- <p class="chose-label"> Choose A Team </p> -->
       <select class="drp-down" [(ngModel)]="score.group_name" >
-        <option value="">Choose A Team</option>  
+        <option value="">Choose Team</option>  
          <option value="{{d.group_name}}"  *ngFor= "let d of selectedGroup" >{{d.group_name}}</option>
        </select>
     </div>                                                                                        

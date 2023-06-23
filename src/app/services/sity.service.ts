@@ -21,7 +21,7 @@ export class SityService {
  }
  
  adminRegister (body: any){
-  return this.http.post(this.url + 'admin/register', body, {
+  return this.http.post(this.url + 'admin/registration', body, {
     observe: 'body'
   })
  }
@@ -76,7 +76,7 @@ export class SityService {
  }
 
  TeamPointsget(){
-  return this.http.get(this.url +'team/points')
+  return this.http.get(this.url +'publishing')
  }
 
  teamPoints (body: any){
