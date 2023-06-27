@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatTableExporterModule } from 'mat-table-exporter';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SubnavComponent } from './subnav/subnav.component';
@@ -29,7 +30,9 @@ import { RecordingComponent } from './recording/recording.component';
 import { JscoreboardComponent } from './jscoreboard/jscoreboard.component';
 import { JudgesidenavComponent } from './judgesidenav/judgesidenav.component';
 import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.component';
-import { JudgereportComponent } from './judgereport/judgereport.component'
+import { JudgereportComponent } from './judgereport/judgereport.component';
+import { HackerreportComponent } from './hackerreport/hackerreport.component';
+import { SponsorreportComponent } from './sponsorreport/sponsorreport.component'
 
 @NgModule({
   declarations: [
@@ -58,12 +61,15 @@ import { JudgereportComponent } from './judgereport/judgereport.component'
     JudgesidenavComponent,
     JudgeslotdisplayComponent,
     JudgereportComponent,
+    HackerreportComponent,
+    SponsorreportComponent,
     
   ],
   imports: [
     FormsModule, 
     ReactiveFormsModule,
     BrowserModule,
+    MatTableExporterModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -85,6 +91,8 @@ import { JudgereportComponent } from './judgereport/judgereport.component'
       {path:'scoreboard', component:JscoreboardComponent},
       {path:'slotdisplay', component:JudgeslotdisplayComponent},
       {path:'jreport', component:JudgereportComponent},
+      {path:'hackerreport', component:HackerreportComponent},
+      {path:'sponsorreport', component:SponsorreportComponent},
 
 
 

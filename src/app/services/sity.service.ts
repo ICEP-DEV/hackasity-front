@@ -79,6 +79,16 @@ export class SityService {
   return this.http.get(this.url +'publishing')
  }
 
+ PublishedResults(){
+  return this.http.get(this.url +'published')
+ }
+
+
+ 
+ TeamPointsPublish(publish:any){
+  return this.http.put(this.url +'publishing/update', publish)
+ }
+
  teamPoints (body: any){
   return this.http.post(this.url +'team/points', body, {
     observe: 'body'

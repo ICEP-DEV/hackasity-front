@@ -11,19 +11,7 @@
    
     <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)">
   </div>
- 
-  <div class="input-row">
-    <!-- <select style="display: inline-block; " (change)="onChangeStartTime($event)">
-      <option *ngFor="let time of timeslot" value="{{time}}">{{time}}</option>
-    </select>
-   
-    <select style="display: inline-block; width: 20%;" (change)="onChangeendTime($event)">
-      <option *ngFor="let time of timeslot" value="{{time}}">{{time}}</option>
-    </select> -->
-    <input type="text" id="group" name="group" placeholder="" required [(ngModel)]="slot.start_time" name="slot.start_time" >
-    <input type="text" id="group" name="group" placeholder="" required [(ngModel)]="slot.end_time" name="slot.end_time" >
-    
-  </div>
+
 
   <div class="input">
     <label>Group name</label>
@@ -34,5 +22,14 @@
   <div class="text-3">Hacker's Group</div>
   <div class="text-5">to</div>
   <button class="button" (click)="addSlot()" >Add</button>
+
+  <div class="form-group">
+    <form action="/action_page.php">
+      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
+    </form> 
+    <form action="/action_page.php">
+      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
+    </form>
+</div>
 </form>
 

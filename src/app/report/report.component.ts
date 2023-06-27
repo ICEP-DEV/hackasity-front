@@ -22,8 +22,18 @@ export class ReportComponent {
     this.sityservice.TeamPointsget().subscribe((respond) => {
       this.temp=respond
       this.table=this.temp.results
-      console.log(this.table)
    
   })
+  }
+
+  addReport(){
+    console.log(this.table)
+    var data={}
+    this.sityservice.TeamPointsPublish(data).subscribe((respond)=>{
+     console.log(respond)
+    },(error)=>{
+      console.log(error)
+   })
+       
   }
 }

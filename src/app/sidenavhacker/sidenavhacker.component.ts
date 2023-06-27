@@ -28,4 +28,8 @@ export class SidenavhackerComponent {
     this._router.navigate(['/hackertimeslot'])
   }
  
+  navigateToHackerReport(){
+    this._router.navigate(['/hackerreport'])
+  }
+ 
 }
