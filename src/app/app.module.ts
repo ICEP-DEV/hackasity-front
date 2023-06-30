@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
@@ -32,7 +32,11 @@ import { JudgesidenavComponent } from './judgesidenav/judgesidenav.component';
 import { JudgeslotdisplayComponent } from './judgeslotdisplay/judgeslotdisplay.component';
 import { JudgereportComponent } from './judgereport/judgereport.component';
 import { HackerreportComponent } from './hackerreport/hackerreport.component';
-import { SponsorreportComponent } from './sponsorreport/sponsorreport.component'
+import { SponsorreportComponent } from './sponsorreport/sponsorreport.component';
+import { MatTableModule } from '@angular/material/table'  
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input'; 
+
 
 @NgModule({
   declarations: [
@@ -63,15 +67,19 @@ import { SponsorreportComponent } from './sponsorreport/sponsorreport.component'
     JudgereportComponent,
     HackerreportComponent,
     SponsorreportComponent,
+   
     
   ],
   imports: [
     FormsModule, 
+    MatInputModule,
     ReactiveFormsModule,
     BrowserModule,
     MatTableExporterModule,
     AppRoutingModule,
     HttpClientModule,
+    MatPaginatorModule,
+    MatTableModule,
     RouterModule.forRoot([
       {path: '', component: LandingpageComponent},
       {path: 'report', component: ReportComponent},

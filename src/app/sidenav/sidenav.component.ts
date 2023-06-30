@@ -28,4 +28,8 @@ export class SidenavComponent {
     this._router.navigate(['/registerusers'])
   }
 
+  navigateToSReport(){
+    this._router.navigate(['/sponsorreport'])
+  }
+  
 }
