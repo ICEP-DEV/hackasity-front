@@ -97,10 +97,10 @@ input[type="password"] {
   border-radius: 5px;
 }
 .form-check-label {
-  margin: 0px;
+  margin: 30px;
 }
 .form-check-input {
-  margin: 10px;
+  margin: 15px;
 }
 
 .btn-primary{

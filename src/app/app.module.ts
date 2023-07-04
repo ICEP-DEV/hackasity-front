@@ -35,7 +35,8 @@ import { HackerreportComponent } from './hackerreport/hackerreport.component';
 import { SponsorreportComponent } from './sponsorreport/sponsorreport.component';
 import { MatTableModule } from '@angular/material/table'  
 import { MatPaginatorModule } from '@angular/material/paginator';
-import {MatInputModule} from '@angular/material/input'; 
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 @NgModule({
@@ -104,7 +105,8 @@ import {MatInputModule} from '@angular/material/input';
 
 
 
-    ])
+    ]),
+    BrowserAnimationsModule
   
   ],
   providers: [SityService],
