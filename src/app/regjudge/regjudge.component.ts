@@ -8,8 +8,8 @@ import { SityService } from '../services/sity.service';
 })
 export class RegjudgeComponent {
   judgeRegister= {
-    Judge_name: "",
-    Judge_surname:"",
+    judge_name: "",
+    judge_surname:"",
     email: "",
     company_name: "",
     password : "",

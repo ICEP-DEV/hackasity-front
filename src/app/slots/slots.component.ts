@@ -26,8 +26,8 @@ export class SlotsComponent {
   }
 
   slot= {
-    Judge_name:"",
-    start_time: "", end_time:"", date: "", Judge_id:"1", length:"1"
+    judge_name:"",
+    start_time: "", end_time:"", date: "", judge_id:"1", length:"1"
   }
 
   onChangeStartTime(event:any){
