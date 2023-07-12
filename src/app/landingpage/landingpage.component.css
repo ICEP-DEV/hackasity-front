@@ -22,7 +22,7 @@
     nav h1{
     float: left;
     line-height:80px;
-    font-size:45px;
+    font-size:35px;
     font-size: inline;
     color: #eb7620;
 
@@ -117,7 +117,7 @@ input[type="password"] {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 800px;
+  height: 700px;
   margin-bottom:50px ;
   margin-top: auto;
  
@@ -147,24 +147,24 @@ input[type="password"] {
 }
 
 .sliding-image:nth-child(1) {
-  background-image: url('../../assets/slide1.png');
+  background-image: url('../../assets/IMG_3824.JPG');
 }
 
-.sliding-image:nth-child(2) {
-  background-image: url('../../assets/slide2.png');
+ .sliding-image:nth-child(2) {
+  background-image: url('../../assets/Screenshot\ \(9\).png');
 }
 
 .sliding-image:nth-child(3) {
-  background-image: url('../../assets/slide3.webp');
+  background-image: url('../../assets/Screenshot\ \(48\).png');
 }
 
 .sliding-image:nth-child(4) {
-  background-image: url('../../assets/slide4.jpg');
-}
+  background-image: url('../../assets/IMG_3824.JPG');
+} 
 
-.sliding-image:nth-child(5) {
-  background-image: url('../../assets/slide5.jpg');
-}
+ .sliding-image:nth-child(5) {
+  background-image: url('../../assets/Screenshot\ \(9\).png');
+}  
 
 @keyframes slideImages {
   0% { transform: translateX(0); }

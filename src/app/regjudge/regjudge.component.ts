@@ -14,6 +14,8 @@ export class RegjudgeComponent {
     company_name: "",
     password : "",
     passwordConfirm:"",
+    Admin_id:"",
+    judge_id:"",
     
   }
 
