@@ -14,10 +14,11 @@ export class ReghackerComponent {
     stu_no: "",
     stu_name:"",
     stu_surname: "",
-    stu_email: "",
+    email: "",
     group_name : "",
-    stu_password:"",
+    password:"",
     passwordConfirm:"",
+    group_id:"",
 
   }
 

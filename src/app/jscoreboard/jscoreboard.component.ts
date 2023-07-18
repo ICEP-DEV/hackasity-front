@@ -52,7 +52,10 @@ export class JscoreboardComponent {
 
   score={
     group_name:"",
-    points: ""
+    points: "",
+    points_id:"",
+    group_id:"",
+    judge_id:"",
   }
 
   getImactScore(impact:any){

@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class SityService {
 
   constructor(private http: HttpClient) { }
-  url = "http://localhost:3000/";
+ url = "https://doubtful-puce-coat.cyclic.app/"
+  //url = "http://localhost:3000/";
 
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {

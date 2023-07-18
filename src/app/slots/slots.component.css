@@ -126,6 +126,6 @@ input:focus {
     display: flex;
     align-items: center;
     gap: 180px;
-    margin-top: -70px;
+    margin-top: -20px;
     margin-left: -280px;
   }
