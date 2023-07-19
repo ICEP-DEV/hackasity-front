@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SityService } from '../services/sity.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -67,6 +68,7 @@ export class UploadfileComponent {
 
     this.sityservice.uploadFile(formdata).subscribe((respond)=>{
       console.log(respond)
+      Swal.fire("Thank You...", 'You added file sucessfully', 'success')
     },error=>{
       console.log(error)
     })

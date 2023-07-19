@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-slots',
   templateUrl: './slots.component.html',
@@ -49,6 +50,7 @@ export class SlotsComponent {
     
     this.sityservice.judgeSlot(this.slot).subscribe((respond)=>{
       console.log(respond)
+      Swal.fire("Thank You...", 'You added slots sucessfully', 'success')
     },(error)=>{
       console.log(error)
     })

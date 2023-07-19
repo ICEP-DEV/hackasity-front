@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-hackerslots',
@@ -43,12 +44,14 @@ export class HackerslotsComponent {
     console.log(event.target.value)
     this.slot.date=event.target.value
   }
+  
 
   addSlot(){
     console.log(this.slot)
     
     this.sityservice.hackerSlot(this.slot).subscribe((respond)=>{
       console.log(respond)
+      Swal.fire("Thank You...", 'You added slots sucessfully', 'success')
     },(error)=>{
       console.log(error)
     })
