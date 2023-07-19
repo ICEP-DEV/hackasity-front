@@ -1,0 +1,170 @@
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
+
+
+<!-- <body class="container"> 
+    <div class="d-flex justify-content-between">
+        <div class="container-fluid">
+             <body class="container"> 
+                <div class="log d-flex justify-content-end">
+                     <nav class="header">
+                         <div id="logo-text">
+                            <a>
+                                <img src="../../assets/Capture-fotor-bg-remover-2023062615952.png" alt="Hackasity"
+                                    style="float: left;height: 72px;width: 225px;" routerLink="read">
+                            </a>
+                        </div> 
+                        <div id="menu-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                         <ul>
+                            <li>
+                                <a href="#" class="nav-link active" id="ModalExample"><button type="button"
+                                        class="btn btn-success">LOGOUT</button></a>
+                            </li>
+                        </ul> 
+                    </nav>
+                </div>
+                <br>
+                <br>
+                <br>
+               <br>
+         <div class="sideNav">
+            <nav class="breadcrumbNav">
+               <br>
+               <br>
+                    <ul>
+                    <li>
+                      <a  class="nav-link active" id="ModalExample" >
+                        <button type="button" class="btn btn-success" routerLink="/adminpage" >Exit Report</button>
+                      </a>
+                    </li>
+                  </ul>
+            </nav>
+        </div>  
+    <div class="container">
+        <br>
+        <br>
+        <div class="reqhead1">REPORT</div>
+        <br>
+        <br>
+     <div class="Search-container">
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="search" autocomplete="off" (keyup)="filterData($event)">
+        </mat-form-field>
+    </div>  
+    <div>
+        &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('xlsx')">.excel</button>
+        &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('csv')">.csv</button>
+        &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('json')">.json</button>
+        &nbsp;&nbsp;<button mat-raised-button (click)="exporter.exportTable('txt')">.txt</button>
+   
+    </div> 
+    <br>
+      <mat-paginator #paginator
+      [pageSize]="10"
+      [pageSizeOptions]="[2,5, 10, 25, 100]"
+      >
+    </mat-paginator> 
+        <table mat-table matSort matTableExporter [dataSource]="dataSource" #exporter="matTableExporter" [hiddenColumns]="[0]" class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Admin Name & Surname </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} {{element.surname}} </td>
+            </ng-container>
+             <ng-container matColumnDef="judge_name">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Judge Name & Surname </th>
+                <td mat-cell *matCellDef="let element"> {{element.judge_name}} {{element.judge_surname}}</td>
+            </ng-container> 
+             <ng-container matColumnDef="company">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Judge Company </th>
+                <td mat-cell *matCellDef="let element"> {{element.company_name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="group">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Group Name</th>
+                <td mat-cell *matCellDef="let element"> {{element.group_name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="points">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Points</th>
+                <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+            </ng-container> 
+            <ng-container matColumnDef="date">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Date</th>
+                <td mat-cell *matCellDef="let element"> {{element.assigned_date}} </td>
+            </ng-container> 
+           
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table> 
+    </div>
+    </div> -->
+
+     <!-- <div>
+         <button (click)="exportTable('pdf')">Export as PDF</button>
+        <button (click)="exportTable('excel')">Export as Excel</button>
+      </div>  -->
+      
+      <!-- <table>
+        <thead>
+          <tr>
+            <th>Admin Name & Surname</th>
+            <th>Group Name</th>
+            <th>Points</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let element of">
+            <td>{{ element.name }} {{ element.surname }}</td>
+            <td>{{ element.group_name }}</td>
+          
+           
+          </tr>
+        </tbody>
+      </table> -->
+      <!-- <div class="frame">
+      <table id="display">
+        <thead>
+            <th>Admin Name & Surname</th>
+            <th>Group Name</th>
+            <th>Points</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hacker of table">
+                <td>{{hacker.name}} {{hacker.surname }}</td>
+                <td>{{hacker.group_name }}</td>
+                <td>{{hacker.points}}</td>
+           
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+<div class="btn">
+
+</div>
+<div>
+    <tr class="btn">
+        <button (click)="exportexcel()" >Export to excel</button>
+    </tr>
+    <table id="excel-table" >
+     <thead class="tbl-head">
+        <tr>
+            <th>Admin Name & Surname</th>
+            <th>Judge Name & Surname</th>
+            <th>Company Name</th>
+            <th>Group Name</th>
+            <th>Points</th>
+            <th>Date</th>
+        </tr> 
+        </thead> 
+        <tr *ngFor="let hacker of table">
+            <td>{{hacker.name}} {{hacker.surname }}</td>
+            <td>{{hacker.judge_name}} {{hacker.judge_surname}}</td>
+            <td>{{hacker.company_name}}</td>
+            <td>{{hacker.group_name }}</td>
+            <td>{{hacker.points}}</td>
+            <td>{{hacker.time}}</td>
+        </tr>
+    </table>
+    
+</div>

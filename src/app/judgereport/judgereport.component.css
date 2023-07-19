@@ -1,0 +1,61 @@
+.btn-btn {
+    background-color: #959795; /* Set the background color of the button */
+    border: none; /* Remove the default button border */
+    color: rgb(36, 34, 34); /* Set the text color */
+    padding: 20px 40px; /* Add some padding to the button */
+    border-radius: 20px; /* Set the border radius to create curvy borders */
+    cursor: pointer; /* Change the cursor style on hover */
+    margin-top: 110px;
+    margin-left: 865px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .rectangle-5 {
+    height: 40px;
+    width: 1910px;
+    background-color: #c7c283;
+  }
+  .timeslot{
+    text-align: center;
+    padding: 7px;
+  }
+    
+  .container {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+    

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav> 
+<app-subnav></app-subnav>
+
+
+ 
+  
+
+ <body>
+   <div class="container">
+     <h2>Register Admin</h2>
+     <form>
+       <div class="form-group">
+         <label for="Name">Name</label>
+         <input type="text" id="username"  required [(ngModel)]="adminRegister.name" name="adminRegister.name">
+       </div>
+       <div class="form-group">
+        <label for="Name">Surname</label>
+        <input type="text" id="username"  required [(ngModel)]="adminRegister.surname" name="adminRegister.surname">
+       </div>
+       <div class="form-group">
+         <label for="Email">Email</label>
+         <input type="text" id="email" required [(ngModel)]="adminRegister.email" name="adminRegister.email">
+       </div>
+       <div class="form-group">
+         <label for="password">Password</label>
+         <input type="password" id="password" required [(ngModel)]="adminRegister.password" name="adminRegister.password">
+       </div>
+       <div class="form-group">
+         <label for="confirm-password">Confirm Password</label>
+         <input type="password" id="confirm-password" name="confirmPassword" required [(ngModel)]="adminRegister.passwordConfirm" name="adminRegister.passwordConfirm">
+       </div>
+       <button (click)="register()" type="submit">Register</button>
+     </form>
+   </div>
+ </body>
+ 
+ 
+  
