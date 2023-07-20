@@ -1,4 +1,7 @@
-
+.chs-user{
+  text-align: center;
+  margin-left: 70px;
+}
 
 form {
   display: flex;
@@ -16,7 +19,9 @@ form {
   margin-bottom: 120px;
   width: 50%;
 }
+.inputName{
 
+}
 label {
   font-weight: bold;
   margin-left: -500%;
@@ -107,7 +112,7 @@ input:focus {
     font-size: 20px;
     font-weight: bold;
   }
-
+/* 
   .text-5{
     text-align: center;
     vertical-align: top;
@@ -115,10 +120,10 @@ input:focus {
     font-family: Inter;
     line-height: auto;
     color: #000000;
-    margin-top: -120px;
+    margin-top: 120px;
     margin-left: -250px;
     font-weight: bold;
-  }
+  } */
  
   
   
@@ -126,6 +131,6 @@ input:focus {
     display: flex;
     align-items: center;
     gap: 180px;
-    margin-top: -20px;
+    margin-top: 0px;
     margin-left: -280px;
   }

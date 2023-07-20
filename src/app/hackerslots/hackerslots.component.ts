@@ -24,11 +24,25 @@ export class HackerslotsComponent {
     console.log(event.target.value)
     this._router.navigate(['/'+event.target.value])
   }
-
+  selectedName:any;
+  temp : any;
   slot= {
     group_name:"",
     start_time: "", end_time:"", date: "",  length:"1"
   }
+  ngOnInit(){
+    this. getGroups()
+  
+
+  }
+
+  getGroups(){
+    this.sityservice.getGroupNames().subscribe((respond)=>{
+    this.temp = respond
+    this.selectedName= this.temp.results
+    console.log(this.selectedName)
+   })
+}
 
   onChangeStartTime(event:any){
     console.log(event.target.value)

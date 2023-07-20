@@ -24,7 +24,7 @@ import { HackerslotsComponent } from './hackerslots/hackerslots.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { SidenavhackerComponent } from './sidenavhacker/sidenavhacker.component';
 import { UploadfileComponent } from './uploadfile/uploadfile.component';
-import { TeamsComponent } from './teams/teams.component';
+// import { TeamsComponent } from './teams/teams.component';
 import { HackertimeslotComponent } from './hackertimeslot/hackertimeslot.component';
 import { RecordingComponent } from './recording/recording.component';
 import { JscoreboardComponent } from './jscoreboard/jscoreboard.component';
@@ -36,7 +36,9 @@ import { SponsorreportComponent } from './sponsorreport/sponsorreport.component'
 import { MatTableModule } from '@angular/material/table'  
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+ 
 
 
 @NgModule({
@@ -59,7 +61,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotificationsComponent,
     SidenavhackerComponent,
     UploadfileComponent,
-    TeamsComponent,
+    // TeamsComponent,
     HackertimeslotComponent,
     RecordingComponent,
     JscoreboardComponent,
@@ -95,7 +97,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: 'notifications', component:NotificationsComponent},
       {path:'sidenavhakers', component:SidenavhackerComponent},
       {path:'uploadfile', component:UploadfileComponent},
-      {path:'teams', component:TeamsComponent},
+      // {path:'teams', component:TeamsComponent},
       {path:'hackertimeslot', component:HackertimeslotComponent},
       {path:'scoreboard', component:JscoreboardComponent},
       {path:'slotdisplay', component:JudgeslotdisplayComponent},

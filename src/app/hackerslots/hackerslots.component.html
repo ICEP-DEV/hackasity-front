@@ -13,13 +13,19 @@
   </div>
 
 
-  <div class="input">
+  <!-- <div class="input">
     <label>Group name</label>
     <input type="text" id="group" name="group" placeholder=""  required [(ngModel)]="slot.group_name" name="slot.group_name">
-  </div>
+  </div> -->
+  <div class="input">
+    <h2>Choose Hacker's Group</h2>
+     <select class="drp-down" [(ngModel)]="slot.group_name" >
+        <option value="{{d.group_name}}"  *ngFor= "let d of selectedName" >{{d.group_name}}</option>
+      </select>
+   </div>
   <div class="text-1">Date of Event </div>
   <div class="text-2">Time Range</div>
-  <div class="text-3">Hacker's Group</div>
+  <!-- <div class="text-3">Hacker's Group</div> -->
   <div class="text-5">to</div>
   <button class="button" (click)="addSlot()" >Add</button>
 
