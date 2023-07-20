@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SityService } from '../services/sity.service';
 import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import swal from "sweetalert2";
 
 @Component({
   selector: 'app-jscoreboard',
@@ -158,6 +159,7 @@ export class JscoreboardComponent {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
     });
+    swal.fire("Thank You...", 'Score Recorded!', 'success')
 }
 
 }
