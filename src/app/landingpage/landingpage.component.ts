@@ -20,8 +20,6 @@ export class LandingpageComponent {
 
   }
 
-   
-
   button() {
     if (this.loginPage.password == "" || this.loginPage.email == "" || this.role == "") {
       return alert("Field must be filled")
@@ -29,16 +27,15 @@ export class LandingpageComponent {
 
     if (this.role=="hacker"){
       this.sityservice.hackerlogin(this.loginPage).subscribe((respond) => {
-        
+        console.log(respond)
         this.sucess = respond
         if (this.sucess.success == false) {
           return alert(this.sucess.message)
         }
         else{
           //return alert(this.sucess.message)
-          console.log(this.sucess.results[0].group_id)
-          localStorage.setItem("hackersId",this.sucess.results[0].group_id.toString())
-          return this.router.navigate(["/whatson"])
+  
+          return this.router.navigate(["/notifications"])
         }
   
       }, (error) => {
@@ -56,9 +53,8 @@ export class LandingpageComponent {
         }
         else{
           //return alert(this.sucess.message)
-          console.log(this.sucess.results[0].Admin_id)
-          localStorage.setItem("adminId",this.sucess.results[0].group_id.toString())
-          return this.router.navigate(["/file"])
+  
+          return this.router.navigate(["/whatson"])
         }
   
       }, (error) => {
@@ -74,10 +70,8 @@ export class LandingpageComponent {
         }
         else{
           //return alert(this.sucess.message)
-          console.log(this.sucess.results[0].judge_id)
-          localStorage.setItem("judgeId",this.sucess.results[0].judge_id.toString())
   
-         return this.router.navigate(["/notifications"])
+          return this.router.navigate(["/scoreboard"])
         }
   
       }, (error) => {
