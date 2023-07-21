@@ -139,3 +139,26 @@ input:focus {
   padding: 75px;
   margin-left: 750px;
 }
+.button {
+  height: 59px;
+  width: 250px;
+  border-radius: 20px;
+  height: 49px;
+  width: 130px;
+  background-color: #e6b012;
+  margin-top: 150px;
+  margin-left: 240px;
+}
+input{
+  width: 50%;
+  height: 40px;
+}
+.input2{
+  height: 40px;
+  padding: 30px;
+  width: 30;
+}
+.txt-to{
+  font-size: 18px;
+  margin-left: 150px;
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
+import swal from "sweetalert2";
 
 @Component({
   selector: 'app-hackerslots',
@@ -59,7 +60,7 @@ export class HackerslotsComponent {
   }
     adminId: any
   addSlot(){
-
+    swal.fire("You Assigned sucessfully")
     console.log(this.adminId= localStorage.getItem("adminID"))
     this.slot.Admin_id = this.adminId
     console.log(this.slot)

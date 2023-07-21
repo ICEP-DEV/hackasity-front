@@ -120,16 +120,17 @@ input:focus {
     margin-top: -70px;
     margin-left: -280px;
   } */
+  
 .container{
   padding: 75px;
   margin-left: 750px;
 }
-  .input1{
+  /* .input1{
     height: 40px;
     padding: 30px;
     width: 100%;
     
-  }
+  } */
   .button {
     height: 59px;
     width: 250px;
@@ -138,5 +139,18 @@ input:focus {
     width: 130px;
     background-color: #e6b012;
     margin-top: 150px;
-    margin-left: -250px;
+    margin-left: 240px;
+  }
+  input{
+    width: 50%;
+    height: 40px;
+  }
+  .input2{
+    height: 40px;
+    padding: 30px;
+    width: 30;
+  }
+  .txt-to{
+    font-size: 18px;
+    margin-left: 150px;
   }
