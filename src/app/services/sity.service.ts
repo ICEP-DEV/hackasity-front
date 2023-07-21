@@ -95,7 +95,7 @@ export class SityService {
  }
  getTeamsNames() {
   // Make an HTTP request to retrieve group names from the backend
-  return this.http.get(this.url +'team');
+  return this.http.get(this.url +'team/names');
 }
 SponsorReport(){
   return this.http.get(this.url +'report')

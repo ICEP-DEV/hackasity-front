@@ -21,9 +21,12 @@ export class RegjudgeComponent {
   }
 
   constructor(private _router:Router,private sityservice: SityService ){};
-
+   adminId: any;
   register(){
     
+    console.log(this.adminId= localStorage.getItem("adminID"))
+    this.judgeRegister.Admin_id = this.adminId
+
     var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     console.log(this.judgeRegister.password)
     if (!this.judgeRegister.password.match(decimal)) {
@@ -85,5 +88,7 @@ export class RegjudgeComponent {
     console.log(error)
   })
 }
+   
+
 
 }

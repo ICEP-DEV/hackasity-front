@@ -1,4 +1,4 @@
-.chs-user{
+/* .chs-user{
   text-align: center;
   margin-left: 70px;
 }
@@ -48,9 +48,9 @@ input:focus {
   padding: 2%;
   padding-left: 50%;
  
-}
+} */
 
-  .text-3 {
+  /* .text-3 {
     text-align: left;
     vertical-align: top;
     font-size: 28;
@@ -59,9 +59,9 @@ input:focus {
     color: #000000;
     margin-left: 85%;
     margin-top: -305px;
-  }  
+  }   */
 
-  .text-1{
+  /* .text-1{
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -72,8 +72,8 @@ input:focus {
     margin-top:-20%;
   
 
-  }
-  .text-2 {
+  } */
+  /* .text-2 {
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -82,9 +82,9 @@ input:focus {
     color: #000000;
     margin-left: -1110px;
     margin-top: 4%;
-  }
+  } */
 
-  .text-3 {
+  /* .text-3 {
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -93,9 +93,9 @@ input:focus {
     color: #000000;
     margin-left: -1080px;
     margin-top: 4%;
-  }
+  } */
 
-  .button {
+  /* .button {
     height: 59px;
     width: 250px;
     border-radius: 20px;
@@ -104,14 +104,14 @@ input:focus {
     background-color: #e6b012;
     margin-top: 150px;
     margin-left: -250px;
-  }
- 
+  } */
+/*  
   .text-4{
     margin-top: -35px;
     margin-left: 40px;
     font-size: 20px;
     font-weight: bold;
-  }
+  } */
 /* 
   .text-5{
     text-align: center;
@@ -126,11 +126,16 @@ input:focus {
   } */
  
   
-  
+/*   
   .form-group {
     display: flex;
     align-items: center;
     gap: 180px;
     margin-top: 0px;
     margin-left: -280px;
-  }
+  } */
+
+.container{
+  padding: 75px;
+  margin-left: 750px;
+}
