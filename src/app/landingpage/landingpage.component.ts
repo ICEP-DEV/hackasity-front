@@ -35,7 +35,7 @@ export class LandingpageComponent {
         else{
           //return alert(this.sucess.message)
   
-          return this.router.navigate(["/notifications"])
+          return this.router.navigate(["/whatson"])
         }
   
       }, (error) => {
@@ -73,7 +73,7 @@ export class LandingpageComponent {
           localStorage.setItem("judgeId",this.sucess.results[0].judge_id.toString())
 
           
-           return this.router.navigate(["/scoreboard"])
+           return this.router.navigate(["/notifications"])
         }
   
       }, (error) => {

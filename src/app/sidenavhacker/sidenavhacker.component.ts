@@ -19,7 +19,7 @@ export class SidenavhackerComponent {
   }
 
   navigateToTeams(){
-    this._router.navigate(['/teams'])
+    this._router.navigate(['/recording'])
   }
   navigateToWhatonH(){
     this._router.navigate(['/whatson'])

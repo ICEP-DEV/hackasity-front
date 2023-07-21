@@ -28,7 +28,7 @@ export class HackerslotsComponent {
   temp : any;
   slot= {
     group_name:"",
-    start_time: "", end_time:"", date: "",  length:"1"
+    start_time: "", end_time:"", date: "",  length:"1",Admin_id:""
   }
   ngOnInit(){
     this. getGroups()
@@ -57,8 +57,11 @@ export class HackerslotsComponent {
     console.log(event.target.value)
     this.slot.date=event.target.value
   }
-
+    adminId: any
   addSlot(){
+
+    console.log(this.adminId= localStorage.getItem("adminID"))
+    this.slot.Admin_id = this.adminId
     console.log(this.slot)
     
     this.sityservice.hackerSlot(this.slot).subscribe((respond)=>{

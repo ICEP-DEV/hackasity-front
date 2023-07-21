@@ -70,6 +70,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JudgereportComponent,
     HackerreportComponent,
     SponsorreportComponent,
+    RecordingComponent,
    
     
   ],
@@ -104,6 +105,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path:'jreport', component:JudgereportComponent},
       {path:'hackerreport', component:HackerreportComponent},
       {path:'sponsorreport', component:SponsorreportComponent},
+      {path: 'recording', component:RecordingComponent},
 
 
 
