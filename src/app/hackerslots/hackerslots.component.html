@@ -4,27 +4,25 @@
 <app-timeslots></app-timeslots>
 
 <div class="container">
-  <div class="input1">
-    <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)" max-width="80%" >
-  </div>
-
-  <div class="input2">
+  <div class="inputName">
     <h2>Choose Hacker's Group</h2>
      <select class="drp-down" [(ngModel)]="slot.group_name" >
         <option  *ngFor= "let d of selectedName" value="{{d.team}}" >{{d.team}}</option>
       </select>
    </div>
 
-  <!-- <div class="text-1">Date of Event </div>
-  <div class="text-2">Time Range</div>
-   <div class="text-3">Hacker's Group</div> -->
+  <div class="date-assign">
+    <h2>Select Date</h2>
+    <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)" max-width="80%" >
+  </div>
 
-  <div class="form-group">
-      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" ><br>
-      <p class="txt-to">To</p>
-      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
-   
-</div>
+   <div class="time-asign">
+     <h2>Time Slot</h2>
+    <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
+    <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
+  </div>
+
+
 <button class="button" (click)="addSlot()" >Add</button>
 
 </div>

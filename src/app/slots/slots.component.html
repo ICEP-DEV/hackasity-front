@@ -5,9 +5,7 @@
 <app-timeslots></app-timeslots>
   <!--------BODY------->
 <div class="container">
-  <div class="date-assign">
-    <input type="date" id="title" name="title" placeholder="" (change)="onChangeDate($event)" >
-  </div>
+
  
   <div class="inputName">
    <h2>Choose Judge Name</h2>
@@ -15,8 +13,13 @@
        <option value="{{d.judge_name}}"  *ngFor= "let d of selectedName" >{{d.judge_name}}</option>
      </select>
   </div> 
+  <div class="date-assign">
+    <h2>Select Date</h2>
+    <input type="date" id="title" name="title" placeholder="" (change)="onChangeDate($event)" >
+  </div>
   
   <div class="time-asign">
+    <h2>Time Slot</h2>
       <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
       <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
     </div>
