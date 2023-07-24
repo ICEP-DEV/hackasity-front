@@ -84,7 +84,7 @@ export class FilesComponent {
     console.log(this.adminRegister)
     this.sityservice.adminRegister(this.adminRegister).subscribe((respond)=>{
       console.log(respond)
-      Swal.fire("Thank You...", 'You registered sucessfully', 'success')
+      Swal.fire("Thank You...", 'You scored sucessfully', 'success')
     },(error)=>{
       console.log(error)
     })

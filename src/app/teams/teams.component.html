@@ -1,15 +1,45 @@
- <app-sidenavhacker></app-sidenavhacker>
- <!-- <button class="join-button">Join</button>
-<div class="line-3-6"> </div>
-    <p class="text-1">The TVH  Experience</p>
-    <div class="back-btn">
-        <div class="rectangle-8-9">
-        <p class="text-2">Back</p>
-      </div>  -->
-      <!-- <img src="/../../hackasity/hackasity-front/src/assets/Screenshot (9).png"> -->
+<app-navbar></app-navbar>
+<app-sidenavhacker></app-sidenavhacker>
 
-      <video #videoElement></video>
+      <!-- <video #videoElement></video>
 
       <button (click)="startScreenSharing()">Start Screen Sharing</button>
       <button (click)="stopScreenSharing()">Stop Screen Sharing</button>
-      
+       -->
+
+       <div class="nav-bar">
+            <h1 class="logo">Hackasity</h1>
+          </div>
+          <div class="sec-nav-bar"></div>
+          <div>
+          
+            <div class="container">
+              <button *ngIf="state == 'NONE'"(click)="startRecording()" class="recbtn">
+                <img src="../assets/recbtn.png" class="rec-img" >
+                <span>Present</span>
+              </button>
+              <button *ngIf="state == 'RECORDING'"(click)="stopRecording()">
+                <img src="../assets/pause-303651_640.png" class="rec-img" >
+                <span>Stop Presentation</span>
+              </button>
+              <button *ngIf="state == 'RECORDED'"(click)="clearRecording()">
+                <img src="../assets/32-323136_delete-icon-hd-png-download.png" class="rec-img" >
+                <span>Clear Presentation</span>
+              </button>
+              <button *ngIf="state == 'RECORDED'"(click)="downloadRecording()">
+                <img src="../assets/istockphoto-1148751569-612x612.jpg" class="rec-img" >
+                <span>Download</span>
+              </button>
+          </div>
+          
+           
+          <video 
+              #videoElement
+              class="video-container"
+              
+              autoplay
+              playsInLine
+          
+              >
+              <source [src]="videoBlobUrl"/>
+            </video>   

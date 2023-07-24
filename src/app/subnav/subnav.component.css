@@ -1,16 +1,4 @@
-.rectangle-5 {
-    height: 150px;
-    width: 92.8%;
-    background-color: #dfe0e2;
-    margin-top: 1px;
-    margin-left: 130px;
-    padding-left: 50px;
-    
-  }
-  .navbar {
-    height: 46px;
-    width: 471px;
-  }
+
   .text-1 {
     text-align: left;
     vertical-align: top;
@@ -41,4 +29,12 @@
   
   .input-row{
     margin-top: -0.5%;
+  }
+  .input-row{
+    border: none;
+  }
+
+  select{
+    border: none;
+    padding: 10px;
   }

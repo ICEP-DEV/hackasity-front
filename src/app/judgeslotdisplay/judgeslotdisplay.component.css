@@ -1,3 +1,13 @@
+.rectangle-5 {
+  height: 40px;
+  width: 1910px;
+  background-color: #c7c283;
+}
+.timeslot{
+  text-align: center;
+  padding: 7px;
+}
+
 table {
     border-collapse: collapse;
   }
@@ -28,7 +38,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #6477cc;
+    background-color: #8aa7b4;
     color: rgb(17, 16, 16);
     border: 1px solid rgb(12, 11, 11);
   }

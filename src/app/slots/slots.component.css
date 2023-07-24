@@ -1,4 +1,7 @@
-
+/* .chs-user{
+  text-align: center;
+  margin-left: 70px;
+}
 
 form {
   display: flex;
@@ -16,7 +19,9 @@ form {
   margin-bottom: 120px;
   width: 50%;
 }
+.inputName{
 
+}
 label {
   font-weight: bold;
   margin-left: -500%;
@@ -43,9 +48,9 @@ input:focus {
   padding: 2%;
   padding-left: 50%;
  
-}
+} */
 
-  .text-3 {
+  /* .text-3 {
     text-align: left;
     vertical-align: top;
     font-size: 28;
@@ -54,9 +59,9 @@ input:focus {
     color: #000000;
     margin-left: 85%;
     margin-top: -305px;
-  }  
+  }   */
 
-  .text-1{
+  /* .text-1{
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -67,8 +72,8 @@ input:focus {
     margin-top:-20%;
   
 
-  }
-  .text-2 {
+  } */
+  /* .text-2 {
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -77,9 +82,9 @@ input:focus {
     color: #000000;
     margin-left: -1110px;
     margin-top: 4%;
-  }
+  } */
 
-  .text-3 {
+  /* .text-3 {
     text-align: left;
     vertical-align: top;
     font-size: 20px;
@@ -88,9 +93,9 @@ input:focus {
     color: #000000;
     margin-left: -1080px;
     margin-top: 4%;
-  }
+  } */
 
-  .button {
+  /* .button {
     height: 59px;
     width: 250px;
     border-radius: 20px;
@@ -99,15 +104,15 @@ input:focus {
     background-color: #e6b012;
     margin-top: 150px;
     margin-left: -250px;
-  }
- 
+  } */
+/*  
   .text-4{
     margin-top: -35px;
     margin-left: 40px;
     font-size: 20px;
     font-weight: bold;
-  }
-
+  } */
+/* 
   .text-5{
     text-align: center;
     vertical-align: top;
@@ -115,17 +120,45 @@ input:focus {
     font-family: Inter;
     line-height: auto;
     color: #000000;
-    margin-top: -120px;
+    margin-top: 120px;
     margin-left: -250px;
     font-weight: bold;
-  }
+  } */
  
   
-  
+/*   
   .form-group {
     display: flex;
     align-items: center;
     gap: 180px;
-    margin-top: -20px;
+    margin-top: 0px;
     margin-left: -280px;
-  }
+  } */
+
+.container{
+  padding: 75px;
+  margin-left: 750px;
+}
+.button {
+  height: 59px;
+  width: 250px;
+  border-radius: 20px;
+  height: 49px;
+  width: 130px;
+  background-color: #e6b012;
+  margin-top: 150px;
+  margin-left: 240px;
+}
+input{
+  width: 50%;
+  height: 40px;
+}
+.input2{
+  height: 40px;
+  padding: 30px;
+  width: 30;
+}
+.txt-to{
+  font-size: 18px;
+  margin-left: 150px;
+}

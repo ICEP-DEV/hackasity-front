@@ -35,7 +35,7 @@ export class LandingpageComponent {
         else{
           //return alert(this.sucess.message)
   
-          return this.router.navigate(["/notifications"])
+          return this.router.navigate(["/whatson"])
         }
   
       }, (error) => {
@@ -53,8 +53,8 @@ export class LandingpageComponent {
         }
         else{
           //return alert(this.sucess.message)
-  
-          return this.router.navigate(["/whatson"])
+          localStorage.setItem("adminID",this.sucess.results[0].Admin_id.toString())
+          return this.router.navigate(["/files"])
         }
   
       }, (error) => {
@@ -70,8 +70,10 @@ export class LandingpageComponent {
         }
         else{
           //return alert(this.sucess.message)
-  
-          return this.router.navigate(["/scoreboard"])
+          localStorage.setItem("judgeId",this.sucess.results[0].judge_id.toString())
+
+          
+           return this.router.navigate(["/notifications"])
         }
   
       }, (error) => {

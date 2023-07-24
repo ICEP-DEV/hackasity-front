@@ -1,6 +1,6 @@
 
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,8 +9,8 @@ form {
   font-family: Arial, sans-serif;
  
   
-}
-.input {
+} */
+/* .input {
   display: flex;
   flex-direction: column;
   margin-bottom: 120px;
@@ -43,9 +43,9 @@ input:focus {
   padding: 2%;
   padding-left: 50%;
  
-}
+} */
 
-  .text-3 {
+  /* .text-3 {
     text-align: left;
     vertical-align: top;
     font-size: 28;
@@ -88,18 +88,9 @@ input:focus {
     color: #000000;
     margin-left: -1080px;
     margin-top: 4%;
-  }
+  } */
 
-  .button {
-    height: 59px;
-    width: 250px;
-    border-radius: 20px;
-    height: 49px;
-    width: 130px;
-    background-color: #e6b012;
-    margin-top: 150px;
-    margin-left: -250px;
-  }
+  /* 
  
   .text-4{
     margin-top: -35px;
@@ -128,4 +119,38 @@ input:focus {
     gap: 180px;
     margin-top: -70px;
     margin-left: -280px;
+  } */
+  
+.container{
+  padding: 75px;
+  margin-left: 750px;
+}
+  /* .input1{
+    height: 40px;
+    padding: 30px;
+    width: 100%;
+    
+  } */
+  .button {
+    height: 59px;
+    width: 250px;
+    border-radius: 20px;
+    height: 49px;
+    width: 130px;
+    background-color: #e6b012;
+    margin-top: 150px;
+    margin-left: 240px;
+  }
+  input{
+    width: 50%;
+    height: 40px;
+  }
+  .input2{
+    height: 40px;
+    padding: 30px;
+    width: 30;
+  }
+  .txt-to{
+    font-size: 18px;
+    margin-left: 150px;
   }

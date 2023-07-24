@@ -5,10 +5,20 @@
     padding: 20px 40px; /* Add some padding to the button */
     border-radius: 20px; /* Set the border radius to create curvy borders */
     cursor: pointer; /* Change the cursor style on hover */
-    margin-top: 150px;
-    margin-left: 500px;
+    margin-top: 110px;
+    margin-left: 865px;
     font-weight: bold;
     font-size: 20px;
+  }
+
+  .rectangle-5 {
+    height: 40px;
+    width: 1910px;
+    background-color: #c7c283;
+  }
+  .timeslot{
+    text-align: center;
+    padding: 7px;
   }
     
   .container {
@@ -17,7 +27,7 @@
     border: 2px solid #ccc;
     overflow: hidden;
     margin-left: 10px;
-    margin-top: 5%;
+    margin-top: 10px;
   }
   
   table {

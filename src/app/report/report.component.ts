@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-report',
@@ -32,7 +31,6 @@ export class ReportComponent {
     var data={}
     this.sityservice.TeamPointsPublish(data).subscribe((respond)=>{
      console.log(respond)
-     Swal.fire("Thank You...", 'You sucessfully published report', 'success')
     },(error)=>{
       console.log(error)
    })

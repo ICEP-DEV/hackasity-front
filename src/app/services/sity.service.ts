@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class SityService {
 
   constructor(private http: HttpClient) { }
- url = "https://doubtful-puce-coat.cyclic.app/"
-  //url = "http://localhost:3000/";
+//  url = "https://doubtful-puce-coat.cyclic.app/"
+  url = "http://localhost:3000/";
 
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {
@@ -95,10 +95,18 @@ export class SityService {
  }
  getTeamsNames() {
   // Make an HTTP request to retrieve group names from the backend
-  return this.http.get(this.url +'team');
+  return this.http.get(this.url +'team/names');
 }
 SponsorReport(){
   return this.http.get(this.url +'report')
 }
 
+ getJudgeNames(){
+
+  return this.http.get(this.url +'judge/judges')
+ }
+ getGroupNames(){
+
+  return this.http.get(this.url +'team/names')
+ }
 }

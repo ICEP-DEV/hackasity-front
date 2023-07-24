@@ -1,18 +1,19 @@
 <app-navbar></app-navbar>
 <app-judgesidenav></app-judgesidenav>
 
-
+<div class="rectangle-5">
+  <h2 class="timeslot">Scoreboard</h2>
+</div>
 <section class="container">
     <div class="img"><img src=""></div>
     <div class="grp-name">
       <!-- <p class="chose-label"> Choose A Team </p> -->
       <select class="drp-down" [(ngModel)]="score.group_name" >
-        <option value="">Choose Team</option>  
-         <option value="{{d.group_name}}"  *ngFor= "let d of selectedGroup" >{{d.group_name}}</option>
+    <option value="#">Choose Team</option>  
+         <option value="{{d.team}}"  *ngFor= "let d of selectedGroup" >{{d.team}}</option>
        </select>
     </div>                                                                                        
-    <table >
-      <caption>Scoring</caption>
+    <table > 
       <thead>
         <tr>
           <th>Novelity 15%</th>
@@ -25,12 +26,12 @@
       </thead>
       <tbody>
         <tr>
-          <td><input type="number" name="NovelityScore" [(ngModel)]="noverlity" (change)="getNovScore($event)"  class="txt-input"></td>
-          <td><input type="number" name="UsefulScore"  [(ngModel)]="usefulness" (change)="getUsefulnesScore($event)"  class="txt-input"></td>
-          <td><input type="number" name="FeasibilityScore" [(ngModel)]="Feasib" (change)="getFeasibilityScore($event)"  class="txt-input"></td>
-          <td><input type="number" name="TechScore" [(ngModel)]="tech" (change)="getTechScore($event)" class="txt-input"></td>
-          <td><input type="number" name="impactScore"  [(ngModel)]="impactScore" (change)="getImactScore($event)" class="txt-input"></td> 
-          <td><input type="number" name="SafetyScore" [(ngModel)]="Safety" (change)="getSafetyScore($event)" class="txt-input"></td>
+          <td><input type="number" name="NovelityScore" [(ngModel)]="noverlity" (change)="getNovScore($event)"  class="txt-input" required> </td>
+          <td><input type="number" name="UsefulScore"  [(ngModel)]="usefulness" (change)="getUsefulnesScore($event)"  class="txt-input" required></td>
+          <td><input type="number" name="FeasibilityScore" [(ngModel)]="Feasib" (change)="getFeasibilityScore($event)"  class="txt-input"required></td>
+          <td><input type="number" name="TechScore" [(ngModel)]="tech" (change)="getTechScore($event)" class="txt-input" required></td>
+          <td><input type="number" name="impactScore"  [(ngModel)]="impactScore" (change)="getImactScore($event)" class="txt-input"required></td> 
+          <td><input type="number" name="SafetyScore" [(ngModel)]="Safety" (change)="getSafetyScore($event)" class="txt-input"required></td>
          
         </tr>
       </tbody>

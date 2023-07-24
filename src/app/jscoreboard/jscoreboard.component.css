@@ -1,4 +1,13 @@
 
+.rectangle-5 {
+  height: 40px;
+  width: 1910px;
+  background-color: #c7c283;
+}
+.timeslot{
+  text-align: center;
+  padding: 7px;
+}
 
 .nav-bar{
   position: fixed;

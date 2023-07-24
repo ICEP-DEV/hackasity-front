@@ -19,10 +19,10 @@ export class SidenavhackerComponent {
   }
 
   navigateToTeams(){
-    this._router.navigate(['/teams'])
+    this._router.navigate(['/recording'])
   }
-  navigateToNotifications(){
-    this._router.navigate(['/notifications'])
+  navigateToWhatonH(){
+    this._router.navigate(['/whatson'])
   }
   navigateToHackerTimeSlot(){
     this._router.navigate(['/hackertimeslot'])

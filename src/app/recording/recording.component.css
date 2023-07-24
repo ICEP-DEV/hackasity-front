@@ -1,0 +1,21 @@
+.btns-join{
+
+
+}
+button{
+    margin-block: 20px;
+    padding: 4px 6px 2px 6px;
+    margin-left: 200px;
+    border-color: rgb(235, 71, 71);
+    border-radius: 10px;
+    margin-top: 48px;
+  }
+  button:hover{
+    margin-block: 20px;
+    padding: 4px 6px 2px 6px;
+    margin-left: 200px;
+    border-color: rgb(235, 71, 71);
+    border-radius: 10px;
+    margin-top: 68px;
+    background-color: rgb(253, 251, 148);
+  }

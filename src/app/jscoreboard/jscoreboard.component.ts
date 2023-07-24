@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SityService } from '../services/sity.service';
 import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import swal from "sweetalert2";
 
 @Component({
   selector: 'app-jscoreboard',
@@ -72,7 +73,7 @@ export class JscoreboardComponent {
 
   getNovScore(novelity:any){
     this.gettotalScore.noverlity = Number(novelity.target.value)
-    if(this.gettotalScore.noverlity > 100){
+    if(this.gettotalScore.noverlity > 100 ){
       alert("enter numb less than 100")
       this.noverlity = 0
       return
@@ -133,14 +134,18 @@ export class JscoreboardComponent {
      
 
   // Process the query or navigate to the Submit Query page
-
+  judgeID:any;
   groupPoints(){
     const points = (document.getElementById('finalScore') as HTMLInputElement).value;
-  console.log(points);
+    console.log(points);
+    this.judgeID = localStorage.getItem("judgeId")
+    this.score.judge_id = this.judgeID
+
   // Create the data object to be sent in the POST request
 
   this.score.points =this.totalPoints.toString()
   console.log(this.score)
+
   // Make a POST request to the API endpoint with the evaluation data
   fetch('http://localhost:3000/team/points', {
     method: 'POST',
@@ -158,6 +163,7 @@ export class JscoreboardComponent {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
     });
+    swal.fire("Thank You...", 'Score Recorded!', 'success')
 }
 
 }

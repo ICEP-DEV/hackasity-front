@@ -4,6 +4,21 @@
     margin-top: -50px;
     margin-left: 130px;
   }
+  .rectangle-5 {
+    height: 40px;
+    width: 1910px;
+    background-color: #c7c283;
+  }
+  
+  .timeslot{
+    text-align: center;
+    padding: 7px;
+  }
+  .upload-btn{
+    text-align: center;
+    padding: 20px;
+
+  }
   .frame-5 {
     align-items: center;
     gap: 21px;

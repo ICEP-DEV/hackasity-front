@@ -1,35 +1,61 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { VideoRecordingService } from './video-recording.services';
 
-
+type RecordingState = 'NONE' | 'RECORDING' | 'RECORDED';
 @Component({
-  selector: 'app-teams',
+  selector: 'app-root',
   templateUrl: './teams.component.html',
   styleUrls: ['./teams.component.css']
 })
-export class TeamsComponent {
+export class AppComponent {
+  title = 'Hack-si-ty_recording-demo'; 
+   
+  videoBlobUrl: any = null;
+  @ViewChild('videoElement') videoElement: any;
+   video: any;
+   state:RecordingState = 'NONE';
 
-  @ViewChild('videoElement', { static: false }) videoElement!: ElementRef;
-  private stream!: MediaStream;
-
-  startScreenSharing() {
-    navigator.mediaDevices.getDisplayMedia({ video: true, audio: false })
-      .then((stream: MediaStream) => {
-        const video = this.videoElement.nativeElement;
-        this.stream = stream;
-        video.srcObject = this.stream;
-        video.play();
-      })
-      .catch((error) => {
-        console.error('Error accessing screen capture:', error);
+  constructor(
+    private videoRecordingService: VideoRecordingService,
+    private ref: ChangeDetectorRef,
+    private sanitizer: DomSanitizer
+    ){
+      this.videoRecordingService.getMediaStream().subscribe((data) => {
+        this.video.srcObject = data;
+        this.ref.detectChanges();
+       // console.log('data: ', data);
       });
+        this.videoRecordingService.getBlob().subscribe((data) =>{
+        console.log('data: ', data);
+        this.videoBlobUrl = this.sanitizer.bypassSecurityTrustUrl(data);
+        this.video.srcObject = null;
+        this.ref.detectChanges();
+       });
+    }
+
+    ngAfterViewInit():void{
+      this.video = this.videoElement.nativeElement;
+    }
+
+  startRecording(){
+    this.videoRecordingService.startRecording();
+    this.state = 'RECORDING';
+  }
+  stopRecording(){
+    this.videoRecordingService.stopRecording();
+    this.state = 'RECORDED';
+  }
+  clearRecording(){
+    this.videoRecordingService.clearRecording();
+    this.video.srcObject = null;
+    this.videoBlobUrl = null;
+    this.state = 'NONE';
+
+  }
+  downloadRecording(){
+    this.videoRecordingService.downloadRecording();
+    
   }
 
-  stopScreenSharing() {
-    const video = this.videoElement.nativeElement;
-    const tracks = this.stream.getTracks();
-    
-    tracks.forEach(track => track.stop());
-    video.srcObject = null;
-  }
-  
 }

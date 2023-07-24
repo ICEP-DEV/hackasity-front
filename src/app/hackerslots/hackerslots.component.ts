@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {SityService }from '../services/sity.service'
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+import swal from "sweetalert2";
 
 @Component({
   selector: 'app-hackerslots',
@@ -25,11 +25,25 @@ export class HackerslotsComponent {
     console.log(event.target.value)
     this._router.navigate(['/'+event.target.value])
   }
-
+  selectedName:any;
+  temp : any;
   slot= {
     group_name:"",
-    start_time: "", end_time:"", date: "",  length:"1"
+    start_time: "", end_time:"", date: "",  length:"1",Admin_id:""
   }
+  ngOnInit(){
+    this. getGroups()
+  
+
+  }
+
+  getGroups(){
+    this.sityservice.getGroupNames().subscribe((respond)=>{
+    this.temp = respond
+    this.selectedName= this.temp.results
+    console.log(this.selectedName)
+   })
+}
 
   onChangeStartTime(event:any){
     console.log(event.target.value)
@@ -44,14 +58,15 @@ export class HackerslotsComponent {
     console.log(event.target.value)
     this.slot.date=event.target.value
   }
-  
-
+    adminId: any
   addSlot(){
+    swal.fire("You Assigned sucessfully")
+    console.log(this.adminId= localStorage.getItem("adminID"))
+    this.slot.Admin_id = this.adminId
     console.log(this.slot)
     
     this.sityservice.hackerSlot(this.slot).subscribe((respond)=>{
       console.log(respond)
-      Swal.fire("Thank You...", 'You added slots sucessfully', 'success')
     },(error)=>{
       console.log(error)
     })
