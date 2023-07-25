@@ -124,6 +124,11 @@ input:focus {
 .container{
   padding: 75px;
   margin-left: 750px;
+  
+}
+.container2{
+  background-image: url(../../assets/slide5.jpg);
+  opacity: 85%;
 }
   /* .input1{
     height: 40px;
@@ -131,26 +136,77 @@ input:focus {
     width: 100%;
     
   } */
+  .container{
+    padding: 75px;
+    margin-left: 500px;
+  }
   .button {
     height: 59px;
     width: 250px;
     border-radius: 20px;
     height: 49px;
     width: 130px;
-    background-color: #e6b012;
+    background-color: #E6B012;
+    margin-top: 150px;
+    margin-left: 240px;
+  }
+  .button:hover {
+    height: 59px;
+    width: 250px;
+    border-radius: 20px;
+    height: 49px;
+    width: 130px;
+    background-color: #225ddb;
     margin-top: 150px;
     margin-left: 240px;
   }
   input{
-    width: 50%;
-    height: 40px;
+    width: 30%;
+    height: 50px;
+    border-radius: 15px;
+    border-color: #E6B012;
   }
+ 
   .input2{
     height: 40px;
-    padding: 30px;
-    width: 30;
+    padding: 100px;
+    width: 50%;
   }
   .txt-to{
     font-size: 18px;
     margin-left: 150px;
   }
+.date-assign{
+  margin-left: 100px;
+ margin-top: 50px;
+}
+.time-asign{
+  display: inline-block;
+  justify-content: space-between ;
+  flex-wrap: wrap;
+  margin-left: 70px;
+  width: 80%;
+  margin-top: 50px;
+}
+.inputName{
+ margin-left: 100px;
+ width: 50%;
+}
+.drp-down{
+  width: 50%;
+  height: 40px;
+  border-radius: 12px;
+  border-color: #E6B012;
+}
+#appt{
+  margin: 0 35px;
+}
+h2{
+  text-align: center;
+  color: rgb(235, 235, 235);
+  margin-left: 30px;
+  background-color: #0762ad;
+}
+span{
+   font-size: 24px;
+}

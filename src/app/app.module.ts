@@ -37,6 +37,8 @@ import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecordscreenComponent} from './recordscreen/recordscreen.component';
+import { VideoRecordingService} from './recordscreen/video-recording.services';
 
  
 
@@ -71,6 +73,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HackerreportComponent,
     SponsorreportComponent,
     RecordingComponent,
+    RecordscreenComponent,
+    
    
     
   ],
@@ -106,6 +110,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path:'hackerreport', component:HackerreportComponent},
       {path:'sponsorreport', component:SponsorreportComponent},
       {path: 'recording', component:RecordingComponent},
+      {path: 'recordscreen', component:RecordscreenComponent},
 
 
 
@@ -113,7 +118,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule
   
   ],
-  providers: [SityService],
+  providers: [SityService,VideoRecordingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
