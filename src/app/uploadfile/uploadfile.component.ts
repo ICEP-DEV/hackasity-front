@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SityService } from '../services/sity.service';
-import { Router } from '@angular/router';
-
+// ********************************************************************
+import { PresentationService } from '../services/presentation.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-uploadfile',
@@ -10,87 +10,24 @@ import { Router } from '@angular/router';
 })
 export class UploadfileComponent {
 
-  selectedFile: any;
+  constructor(private service:PresentationService){}
 
-  filename: any
-  size: any
-  date: any
-  time: any
-  format: any
+  //variables
+  readData:any;
 
-  constructor(private _router:Router,private sityservice: SityService ){};
-  ngOnInit() {
-    this.filename=localStorage.getItem("Filename")
-    this.format=localStorage.getItem("format")
-    this.size=localStorage.getItem("size")
-
-    this.time=localStorage.getItem("date")
-
-  }
-  uploadFile= {
-    filename: "",
-    size:"",
-    date: "",
-    time: "",
-    format:"",
+  ngOnInit(): void{
+    this.service.getPresentaion().subscribe((res) => {
+      console.log(res, "res==>");
+      this.readData = res.data;
+    });
   }
 
+  userForm = new FormGroup({
+    'filename':new FormControl('', Validators.required)
+  });
 
-
-  onFileSelected(event: any) {
-    this.selectedFile = event.target.files[0];
-    console.log(this.selectedFile)
-    const name :string= "";
-    //this.uploadFile.filename=
-    this.filename = this.selectedFile?.name.substring(0,this.selectedFile.name.lastIndexOf(".")).toString()
-    this.format = this.selectedFile?.name.substring(this.selectedFile.name.lastIndexOf(".")).toString()
-
-    var date= new Date()
-    var dd= date.getDate()
-    var mm= date.getMonth()+1
-    var yyyy=date.getFullYear()
-    this.time=dd+"/"+mm+"/"+yyyy
-
-    let formdata = new FormData()
-    formdata.append("filename",this.selectedFile)
-    this.size = Number (this.selectedFile?.size)/1000+"kb"
-    var file={
-      filename:this.selectedFile
-    }
-
-    localStorage.setItem("Filename",this.filename)
-    localStorage.setItem("format",this.format)
-    localStorage.setItem("size",this.size)
-    localStorage.setItem("date",this.time)
-
-
-
-    this.sityservice.uploadFile(formdata).subscribe((respond)=>{
-      console.log(respond)
-    },error=>{
-      console.log(error)
-    })
+  userSubmit(){
+    console.log(this.userForm.value);
   }
 
-  submit(){
-
-  }
-
-
-  selectedFiles: File | null = null;
-
-  onFileSelecteds(event: any) {
-    this.selectedFile = event.target.files[0];
-  }
-
-  upload() {
-    if (this.selectedFile) {
-      // Perform the upload logic here
-      console.log('Uploading file:', this.selectedFile);
-    } else {
-      console.log('No file selected!');
-    }
-  }
-  
- 
 }

@@ -1,7 +1,32 @@
 <app-navbar></app-navbar>
-<app-sidenavhacker></app-sidenavhacker>
+<!-- <app-sidenavhacker></app-sidenavhacker> -->
 
-<div class="rectangle-5">
+
+<div class="container">
+  <div class="submit-presentation">
+    <form [formGroup]="userForm" (ngSubmit)="userSubmit()">
+      <input type="file" class="form-control" formControlName="filename" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Presentation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let us of readData'>
+        <td scope="row">{{us.id}}</td>
+        <td scope="col">{{us.filename}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <div class="rectangle-5">
   <h2 class="timeslot">Hackers File</h2>
 </div>
 <div class="upload-btn">
@@ -9,7 +34,6 @@
       <input type="file" id="fileInput" (change)="onFileSelected($event)" >
       <label for="fileInput" class="upload-button">Upload File</label>
       <span>{{ selectedFile?.name }}</span>
-
     
 </div>
 
@@ -33,5 +57,5 @@
     </tbody>
   </table>
   
-</div>
+</div> -->
 
