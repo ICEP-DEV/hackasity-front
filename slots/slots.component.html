@@ -1,0 +1,37 @@
+
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
+<app-subnavslots></app-subnavslots>
+<app-timeslots></app-timeslots>
+  <!--------BODY------->
+<div class="container">
+
+ 
+  <div class="inputName">
+   <h2>Choose Judge Name</h2>
+    <select class="drp-down" [(ngModel)]="slot.judge_name" >
+       <option value="{{d.judge_name}}"  *ngFor= "let d of selectedName" >{{d.judge_name}}</option>
+     </select>
+  </div> 
+  <div class="date-assign">
+    <h2>Select Date</h2>
+    <input type="date" id="title" name="title" placeholder="" (change)="onChangeDate($event)" >
+  </div>
+  
+  <div class="time-asign">
+    <h2>Time Slot</h2>
+      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
+      <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
+    </div>
+    <div class="link-assign">
+      <h2>Link</h2>
+      <input type="text" id="title" required [(ngModel)]="slot.link" name="title" placeholder="">
+    </div>
+    
+
+    <button class="button" (click)="addSlot()" >Add</button>
+    <a href="https://www.microsoft.com/en-za/microsoft-teams/log-in" class="btn btn2">Create Link</a>
+
+  </div>
+  
+

@@ -1,0 +1,105 @@
+ /* .line-4 {
+ 
+    height: 0px;
+    width: 160%;
+    border: 1px solid #786e6e;
+    margin-top: 80%; 
+  } */
+  .text-1 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #403d3d;
+    margin-left: 81%;
+    margin-top: -1450px;
+  }
+  .rectangle-4-0 {
+    border-radius: 10px;
+    height: 36px;
+    width: 250px;
+    background-color: #d1c7c7;
+    margin-left: 81%;
+  }
+  .text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: rgba(19, 48, 124, 0.8500000238418579);
+    margin-left: 10px;
+    padding: 5px;
+  }
+  .text-3 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #403d3d;
+    margin-left: 81%;
+  }
+   .toggle-switches {
+    margin-left: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -140px;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #13317C;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .toggle-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .toggle-switch-input:checked + .toggle-switch-slider {
+    background-color: #2196F3;
+  }
+  
+  .toggle-switch-input:focus + .toggle-switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .toggle-switch-input:checked + .toggle-switch-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
