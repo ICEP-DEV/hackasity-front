@@ -1,4 +1,3 @@
-
 <app-navbar></app-navbar>
 <app-sidenav></app-sidenav>
 <app-subnavslots></app-subnavslots>
@@ -24,8 +23,13 @@
       <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
     </div>
 
-    <button class="button" (click)="addSlot()" >Add</button>
+    <div class="link-assign">
+      <h2>Link</h2>
+      <input type="text" id="title" name="title" required [(ngModel)]="slot.link" placeholder="">
+    </div> 
+    
 
+    <button class="button" (click)="addSlot()" >Add</button>
+    <a href="https://www.microsoft.com/en-za/microsoft-teams/log-in" target="_blank" class="btn btn2">Create Link</a>
 
   </div>
-
