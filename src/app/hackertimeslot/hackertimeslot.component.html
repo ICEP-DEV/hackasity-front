@@ -12,6 +12,7 @@
         <th>Start Time</th>
         <th>End Time</th>
         <th>Date</th>
+        <th>Link</th>
     </thead>
     <tbody>
         <tr *ngFor="let hacker of table">
@@ -19,6 +20,7 @@
             <td>{{hacker.start_time}}</td>
             <td>{{hacker.end_time}}</td>
             <td>{{hacker.date}}</td>
+            <td><a href={{hacker.link}} target="_blank">Join</a></td>
         </tr>
     </tbody>
 </table>
