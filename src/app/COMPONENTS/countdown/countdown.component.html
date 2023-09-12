@@ -1,0 +1,23 @@
+<div class="card-header">
+    <h2>What Is the 10/20/30 Rule of PowerPoint Presentations?</h2>
+    <p>The idea of the 10/20/30 rule is easy to understand, which is summed up in three points.</p>
+      
+      <ul>
+        <li>Your presentation should consist of no more than 10 slides.</li>
+        <li>Your presentation should last no longer than 20 minutes.</li>
+        <li>The text on each slide should be no lower than 30 points in size.</li>
+      </ul>
+  </div>
+  
+  
+    <div id="countdown">
+      <countdown #cd (event)="handleEvent($event)" [config]="{ leftTime: 600 }"></countdown>
+      <div id='tiles'></div>
+      <div class="labels">
+        
+          <button (click)="cd.pause()" class="btn btn-link btn-sm">pause</button>
+          <button (click)="cd.resume()" class="btn btn-link btn-sm">resume</button>
+          <button (click)="cd.stop()" class="btn btn-link btn-sm">stop</button>
+          <button (click)="cd.restart()" class="btn btn-link btn-sm">restart</button>
+      </div>
+    </div>

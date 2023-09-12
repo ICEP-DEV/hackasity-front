@@ -39,6 +39,8 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ****************************************************************************
 import { PresentationService } from './services/presentation.service';
+import { CountdownModule } from 'ngx-countdown';
+import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 
  
 
@@ -73,9 +75,9 @@ import { PresentationService } from './services/presentation.service';
     HackerreportComponent,
     SponsorreportComponent,
     RecordingComponent,
-   
-    
-  ],
+    CountdownComponent,
+],
+
   imports: [
     FormsModule, 
     MatInputModule,
@@ -111,7 +113,8 @@ import { PresentationService } from './services/presentation.service';
     ]),
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CountdownModule
   
   ],
   providers: [SityService, PresentationService],
