@@ -1,4 +1,207 @@
-.line-2 {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: #3A92AF;
+  background: -webkit-linear-gradient(bottom left, #3A92AF 0%, #5CA05A 100%);
+  background: -moz-linear-gradient(bottom left, #3A92AF 0%, #5CA05A 100%);
+  background: -o-linear-gradient(bottom left, #3A92AF 0%, #5CA05A 100%);
+  background: linear-gradient(to top right, #3A92AF 0%, #5CA05A 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3A92AF', endColorstr='#5CA05A',GradientType=1 );
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+	width: 300px;
+	height: 260px;
+  top: 70px;
+  left: 50px;
+	background: #fff;
+	box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2);
+	border-radius: 3px;
+}
+
+.title {
+	font-size: 16px;
+	color: #676767;
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid #D8D8D8;
+	text-align: center;
+}
+
+.dropzone {
+	position: absolute;
+	z-index: 1;
+	box-sizing: border-box;
+	display: table;
+	table-layout: fixed;
+	width: 100px;
+	height: 80px;
+	top: 86px;
+	left: 100px;
+	border: 1px dashed #A4A4A4;
+	border-radius: 3px;
+	text-align: center;
+	overflow: hidden;
+}
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	.upload {
+		margin: 6px 0 0 2px;
+	}
+	
+	.filename {
+		display: block;
+		color: #676767;
+		font-size: 14px;
+		line-height: 18px;
+	}
+	
+	.input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+	}
+	
+
+.upload-btn {
+	position: absolute;
+	width: 140px;
+	height: 40px;
+	left: 80px;
+	bottom: 24px;
+	background: #6ECE3B;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	box-shadow: 0 2px 0 0 #498C25;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.bar {
+	position: absolute;
+	z-index: 1;
+	width: 300px;
+	height: 3px;
+	top: 49px;
+	left: 0;
+	background: #6ECE3B;
+	transition: all 3s ease-out;
+	transform: scaleX(0);
+	transform-origin: 0 0;
+
+}
+
+.syncing {
+	position: absolute;
+	top: 109px;
+	left: 134px;
+	opacity: 0;
+
+}
+
+.done {
+	position: absolute;
+	top: 112px;
+	left: 132px;
+	opacity: 0;
+
+}
+
+@keyframes syncing {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+}
+
+@keyframes done {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/* .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #d2d7e2;
+} */
+
+/* .wrapper{
+  width: 430px;
+  padding: 30px;
+  background: rgb(151, 148, 148);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .wrapper header{
+  color: #6990f2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper form{
+  height: 167px;
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #fff;
+}
+
+form :where(i, p){
+  color: #6990f2;
+}
+
+form i{
+  font-size: 50px;
+}
+
+form p{
+  font-size: px;
+} */
+/* .line-2 {
     width: 1780px;
     border: 1px solid #786e6e;
     margin-top: -50px;
@@ -103,7 +306,7 @@
   th, td {
     padding: 70px;
     text-align: center;
-  }
+  } */
   
 /* td {
   white-space: nowrap;
@@ -112,7 +315,7 @@
 } */
 
 
-  .text-5 {
+  /* .text-5 {
     text-align: center;
     vertical-align: top;
     font-size: 21px;
@@ -161,7 +364,7 @@
     margin-left: 340px;
     margin-top: 30px;
   }
-  /* -------------------- */
+  
   .upload-container {
     display: flex;
     align-items: center;
@@ -204,4 +407,4 @@
     text-align: left;
     background-color: #fcffff;
     color: rgb(17, 16, 16);
-  }
+  } */
