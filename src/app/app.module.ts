@@ -41,6 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationService } from './services/presentation.service';
 import { CountdownModule } from 'ngx-countdown';
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
+import { LoginComponent } from './COMPONENTS/login/login.component';
 
  
 
@@ -76,6 +77,7 @@ import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
     SponsorreportComponent,
     RecordingComponent,
     CountdownComponent,
+    LoginComponent,
 ],
 
   imports: [
