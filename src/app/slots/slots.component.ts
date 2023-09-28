@@ -28,7 +28,7 @@ export class SlotsComponent {
 
   slot= {
     judge_name:"",
-    start_time: "", end_time:"", date: "", judge_id:"", length:"1",Admin_id:""
+    start_time: "", end_time:"", date: "", judge_id:"", length:"1",link:"",Admin_id:""
   }
    
   ngOnInit(){
