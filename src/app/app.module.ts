@@ -42,6 +42,7 @@ import { PresentationService } from './services/presentation.service';
 import { CountdownModule } from 'ngx-countdown';
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { LoginComponent } from './COMPONENTS/login/login.component';
+import { ClientsComponent } from './COMPONENTS/clients/clients.component';
 
  
 
@@ -78,6 +79,7 @@ import { LoginComponent } from './COMPONENTS/login/login.component';
     RecordingComponent,
     CountdownComponent,
     LoginComponent,
+    ClientsComponent,
 ],
 
   imports: [
