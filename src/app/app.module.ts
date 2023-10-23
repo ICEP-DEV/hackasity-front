@@ -43,6 +43,7 @@ import { CountdownModule } from 'ngx-countdown';
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { LoginComponent } from './COMPONENTS/login/login.component';
 import { ClientsComponent } from './COMPONENTS/clients/clients.component';
+import { AdmindashComponent } from './admindash/admindash.component';
 
  
 
@@ -80,6 +81,7 @@ import { ClientsComponent } from './COMPONENTS/clients/clients.component';
     CountdownComponent,
     LoginComponent,
     ClientsComponent,
+    AdmindashComponent,
 ],
 
   imports: [
@@ -114,6 +116,7 @@ import { ClientsComponent } from './COMPONENTS/clients/clients.component';
       {path:'hackerreport', component:HackerreportComponent},
       {path:'sponsorreport', component:SponsorreportComponent},
       {path: 'recording', component:RecordingComponent},
+      {path: 'admindash', component:AdmindashComponent},
     ]),
     BrowserAnimationsModule,
     ReactiveFormsModule,

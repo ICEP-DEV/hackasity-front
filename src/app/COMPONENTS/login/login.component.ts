@@ -52,7 +52,7 @@ export class LoginComponent {
         else{
           //return alert(this.sucess.message)
           localStorage.setItem("adminID",this.sucess.results[0].Admin_id.toString())
-          return this.router.navigate(["/files"])
+          return this.router.navigate(["/admindash"])
         }
   
       }, (error: any) => {
