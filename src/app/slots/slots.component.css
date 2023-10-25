@@ -1,18 +1,28 @@
 
 .container{
-    padding: 75px;
-    margin-left: 500px;
+    padding: 20px;
+   text-align: center;
+   align-items: center;
   }
-  .button {
-    height: 59px;
-    width: 250px;
-    border-radius: 20px;
-    height: 49px;
-    width: 130px;
-    background-color: #e6b012;
-    margin-top: 150px;
-    margin-left: 240px;
+  button[type="submit"] {
+    
+   text-align: center;
+
+    width: 10%;
+    padding: 10px;
+    background-color: #e6b412;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
   }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  
+  
   input{
     width: 30%;
     height: 40px;
@@ -27,21 +37,24 @@
     margin-left: 150px;
   }
 .date-assign{
-  margin-left: 100px;
- margin-top: 50px;
+ 
+ margin-top: 20px;
+}
+.link-assign{
+  margin-top: 5%;
 }
 
 .time-asign{
   display: inline-block;
   justify-content: space-between ;
   flex-wrap: wrap;
-  margin-left: 70px;
+  
   width: 80%;
   margin-top: 50px;
 }
 .inputName{
- margin-left: 100px;
- width: 50%; 
+  margin-top: 20px;
+ text-align: center;
  
 }
 
@@ -54,5 +67,18 @@
   margin: 0 35px;
 }
 h2{
-  margin-left: 30px;
+  text-align: center;
+}
+
+.rectangle-5 {
+  height: 40px;
+ 
+  background-color: #b6b6b6;
+}
+
+.timeslot{
+  margin-top: 20px;
+  text-align: center;
+  padding: 7px;
+  color: white;
 }

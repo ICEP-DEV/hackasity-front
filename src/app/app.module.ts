@@ -43,7 +43,12 @@ import { CountdownModule } from 'ngx-countdown';
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { LoginComponent } from './COMPONENTS/login/login.component';
 import { ClientsComponent } from './COMPONENTS/clients/clients.component';
+import { AboutComponent } from './COMPONENTS/about/about.component';
 import { AdmindashComponent } from './admindash/admindash.component';
+import { ActivityComponent } from './activity/activity.component';
+import { ResultsComponent } from './results/results.component';
+import { JudgedashComponent } from './judgedash/judgedash.component';
+import { ActivityjudgeComponent } from './activityjudge/activityjudge.component';
 
  
 
@@ -81,7 +86,13 @@ import { AdmindashComponent } from './admindash/admindash.component';
     CountdownComponent,
     LoginComponent,
     ClientsComponent,
+    AboutComponent,
     AdmindashComponent,
+    ActivityComponent,
+    ResultsComponent,
+    JudgedashComponent,
+    ActivityjudgeComponent
+    
 ],
 
   imports: [
@@ -94,30 +105,6 @@ import { AdmindashComponent } from './admindash/admindash.component';
     HttpClientModule,
     MatPaginatorModule,
     MatTableModule,
-    RouterModule.forRoot([
-      {path: '', component: LandingpageComponent},
-      {path: 'report', component: ReportComponent},
-      {path: 'files', component: FilesComponent},
-      {path: 'whatson', component: WhatsonComponent},
-      {path: 'registerusers', component:ReguserComponent},
-      {path: 'timeslots', component:SlotsComponent},
-      {path: 'hacker', component:ReghackerComponent},
-      {path: 'judge', component:RegjudgeComponent},
-      {path: 'hackerslots', component:HackerslotsComponent},
-      {path: 'slots', component:SlotsComponent},
-      {path: 'notifications', component:NotificationsComponent},
-      {path:'sidenavhakers', component:SidenavhackerComponent},
-      {path:'uploadfile', component:UploadfileComponent},
-      // {path:'teams', component:TeamsComponent},
-      {path:'hackertimeslot', component:HackertimeslotComponent},
-      {path:'scoreboard', component:JscoreboardComponent},
-      {path:'slotdisplay', component:JudgeslotdisplayComponent},
-      {path:'jreport', component:JudgereportComponent},
-      {path:'hackerreport', component:HackerreportComponent},
-      {path:'sponsorreport', component:SponsorreportComponent},
-      {path: 'recording', component:RecordingComponent},
-      {path: 'admindash', component:AdmindashComponent},
-    ]),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,

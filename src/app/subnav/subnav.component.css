@@ -16,19 +16,21 @@
   }
 
   .text-2 {
-    text-align: left;
+    text-align: center;
     vertical-align: top;
     font-size: 28;
     font-family: Inter;
     line-height: auto;
     color: #000000;
-    margin-left: 9.5%;
-    margin-top: 1%;
+   
+    margin-top: 0%;
     font-weight: bold;
   }
   
   .input-row{
+    text-align: center;
     margin-top: -0.5%;
+    margin-bottom: 5%;
   }
   .input-row{
     border: none;

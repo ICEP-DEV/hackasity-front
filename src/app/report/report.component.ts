@@ -1,6 +1,13 @@
-import { Component } from '@angular/core';
-import {SityService }from '../services/sity.service'
-import { Router } from '@angular/router';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
+import { Data, Router } from '@angular/router';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { SityService } from '../services/sity.service';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatPaginatorModule, MatPaginator} from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatTableExporterModule } from 'mat-table-exporter';
+import * as XLSX from 'xlsx'
 
 @Component({
   selector: 'app-report',
@@ -9,7 +16,9 @@ import { Router } from '@angular/router';
 })
 export class ReportComponent {
 
-  
+  fileName= 'ExcelSheet.xlsx'
+  displayedColumns: string[]=['group_id','group_name','points'];
+  dataSource! :MatTableDataSource<any>;
   constructor(private _router:Router,private sityservice: SityService){};
   ngOnInit() {
     this.point()
@@ -36,4 +45,16 @@ export class ReportComponent {
    })
        
   }
+  exportexcel():void{
+    let element = document.getElementById('excel-table')
+
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element)
+
+    const wb: XLSX.WorkBook =XLSX.utils.book_new()
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1')
+
+    XLSX.writeFile(wb, this.fileName)
+  }
+
+
 }
