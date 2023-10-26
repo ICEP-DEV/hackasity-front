@@ -29,29 +29,32 @@
 
       <div class="row text-center pad-top">
 
+        <ul class="list-group" >
+            <li class="list-group-item active">Judges Names</li>
+            <li class="list-group-item">1st Judge</li>
+            <li class="list-group-item">2nd Judge</li>
+            <li class="list-group-item">3rd Judge</li>
+           
+          </ul>
+
    
-        <div class="frame">
+       <!--  <div class="frame">
             <table id="display">
                 <thead>
-                    <th>Judge(s) names</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
-                    <th>Date</th>
-                    <th>Link</th>
+                    <th style="text-align: center;">Judge(s) Names</th>
+                    
                 </thead>
                 <tbody>
                     <tr *ngFor="let hacker of table">
                         <td>{{hacker.judge_name}}</td>
-                        <td>{{hacker.start_time}}</td>
-                        <td>{{hacker.end_time}}</td>
-                        <td>{{hacker.date}}</td>
-                        <td><a href={{hacker.link}} target="_blank">Join</a></td>
-                        <!-- <td>{{hacker.link}}</td> -->
+                       
                     </tr>
                 </tbody>
             </table>
-            </div>
+            </div>-->
 </div>
+
+<app-presentationslot></app-presentationslot>
      <!-- /. PAGE INNER  -->
     </div>
  <!-- /. PAGE WRAPPER  -->

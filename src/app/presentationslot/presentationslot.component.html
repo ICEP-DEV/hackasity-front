@@ -1,0 +1,31 @@
+
+
+
+ <div class="row text-center pad-top">
+
+    <div class="frame">
+      <table id="display">
+          <thead>
+              <th>Name of group</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Date</th>
+              <th>Link</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let hacker of table">
+                  <td>{{hacker.group_name}}</td>
+                  <td>{{hacker.start_time}}</td>
+                  <td>{{hacker.end_time}}</td>
+                  <td>{{hacker.date}}</td>
+                  <td><a href={{hacker.link}} target="_blank">Join</a></td>
+                  <!-- <td>{{hacker.link}}</td> -->
+              </tr>
+          </tbody>
+      </table>
+      </div>
+
+
+  
+</div>
+  

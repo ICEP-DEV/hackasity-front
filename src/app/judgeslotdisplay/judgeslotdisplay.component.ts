@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./judgeslotdisplay.component.css']
 })
 export class JudgeslotdisplayComponent {
+hacker: any;
 
   constructor(private _router:Router,private sityservice: SityService){};
   ngOnInit() {

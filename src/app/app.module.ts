@@ -49,6 +49,8 @@ import { ActivityComponent } from './activity/activity.component';
 import { ResultsComponent } from './results/results.component';
 import { JudgedashComponent } from './judgedash/judgedash.component';
 import { ActivityjudgeComponent } from './activityjudge/activityjudge.component';
+import { PresentationslotComponent } from './presentationslot/presentationslot.component';
+
 
  
 
@@ -91,7 +93,9 @@ import { ActivityjudgeComponent } from './activityjudge/activityjudge.component'
     ActivityComponent,
     ResultsComponent,
     JudgedashComponent,
-    ActivityjudgeComponent
+    ActivityjudgeComponent,
+    PresentationslotComponent,
+    
     
 ],
 
