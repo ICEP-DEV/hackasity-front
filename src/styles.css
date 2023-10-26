@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.section-title h2 {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 15px 0 0 0;
+    background: #000000;
+    color: #ffffff;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+  }
+  .section-title h3 {
+    text-align: center;
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .section-title h3 span {
+    color: #29ea10;
+  }

@@ -16,7 +16,9 @@ export class LoginComponent {
   role = ""
   sucess: any
 
-  constructor(private sityservice: SityService, private router: Router) {}
+  constructor(private sityservice: SityService, private router: Router) {
+
+  }
 
   button() {
     if (this.loginPage.password == "" || this.loginPage.email == "" || this.role == "") {
@@ -71,7 +73,7 @@ export class LoginComponent {
           localStorage.setItem("judgeId",this.sucess.results[0].judge_id.toString())
 
           
-           return this.router.navigate(["/notifications"])
+           return this.router.navigate(["/judgedash"])
         }
   
       }, (error) => {

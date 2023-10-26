@@ -123,9 +123,9 @@
   width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid rgb(238, 93, 67);
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background-color: #c8d8ec;
+  background-color: #ffffff;
 }
 
 h2 {
@@ -164,4 +164,16 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.rectangle-5 {
+  height: 40px;
+ 
+  background-color: #b6b6b6;
+}
+
+.timeslot{
+  text-align: center;
+  padding: 7px;
+  color: white;
 }

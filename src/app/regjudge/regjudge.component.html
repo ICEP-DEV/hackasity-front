@@ -1,34 +1,84 @@
-<app-navbar></app-navbar>
-<app-subnav></app-subnav>
-<app-sidenav></app-sidenav>
 
-  <div class="container">
-    <h2>Register Judges</h2>
-    <form>
-      <div class="form-group">
-        <label for="judge_Name">Name </label>
-        <input type="text" id="name"  required [(ngModel)]="judgeRegister.judge_name" name="judgeRegister.judge_name">
+
+  
+
+  
+
+<!-- <div class="rectangle-5">
+  <h2 class="timeslot">Register</h2>
+</div>-->
+
+
+   
+   
+
+<app-sidenav></app-sidenav>
+<div id="page-wrapper" >
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+             <h2>REGISTER</h2>   
+            </div>
+        </div>              
+         <!-- /. ROW  -->
+          <hr />
+        <!-- <div class="row">
+            <div class="col-lg-12 ">
+                <div class="alert alert-info">
+                     <strong>Welcome Admin ! </strong> You Have No pending Task For Today.
+                </div>
+               
+            </div>
+            </div>
+         /. ROW  --> 
+      <div class="row text-center pad-top">
+        <app-subnav></app-subnav>
+   
+
       </div>
-      <div class="form-group">
-        <label for="judge_Surname">Surname</label>
-        <input type="text" id="surname"  required [(ngModel)]="judgeRegister.judge_surname" name="judgeRegister.judge_surname">
+
+      <div class="row text-center pad-top">
+        
+        <div class="container">
+          <h2>Register Judges</h2>
+          <form>
+            <div class="form-group">
+              <label for="judge_Name">Name </label>
+              <input type="text" id="name"  required [(ngModel)]="judgeRegister.judge_name" name="judgeRegister.judge_name">
+            </div>
+            <div class="form-group">
+              <label for="judge_Surname">Surname</label>
+              <input type="text" id="surname"  required [(ngModel)]="judgeRegister.judge_surname" name="judgeRegister.judge_surname">
+            </div>
+            <div class="form-group">
+              <label for="studentEmail">Email</label>
+              <input type="text" id="email" name="email" required [(ngModel)]="judgeRegister.email" name="judgeRegister.email">
+            </div>
+            <div class="form-group">
+              <label for="studentNo">Company Name</label>
+              <input type="text" id="companyName" name="companyName" required [(ngModel)]="judgeRegister.company_name" name="judgeRegister.company_name">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required [(ngModel)]="judgeRegister.password" name="judgeRegister.password">
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirmPassword" required [(ngModel)]="judgeRegister.passwordConfirm" name="judgeRegister.passwordConfirm">
+            </div>
+            <button (click)="register()" type="submit">Register</button>
+          </form>
+        </div>
+      
+
       </div>
-      <div class="form-group">
-        <label for="studentEmail">Email</label>
-        <input type="text" id="email" name="email" required [(ngModel)]="judgeRegister.email" name="judgeRegister.email">
-      </div>
-      <div class="form-group">
-        <label for="studentNo">Company Name</label>
-        <input type="text" id="companyName" name="companyName" required [(ngModel)]="judgeRegister.company_name" name="judgeRegister.company_name">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required [(ngModel)]="judgeRegister.password" name="judgeRegister.password">
-      </div>
-      <div class="form-group">
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirmPassword" required [(ngModel)]="judgeRegister.passwordConfirm" name="judgeRegister.passwordConfirm">
-      </div>
-      <button (click)="register()" type="submit">Register</button>
-    </form>
-  </div>
+       
+
+</div>
+     <!-- /. PAGE INNER  -->
+    </div>
+ <!-- /. PAGE WRAPPER  -->
+ 
+ 
+ 
+  

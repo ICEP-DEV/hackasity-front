@@ -1,33 +1,93 @@
-<app-navbar></app-navbar>
+
+
+
+
+
+
+
+<!-- <div class="rectangle-5">
+  <h2 class="timeslot">Register</h2>
+</div>-->
+
+
+   
+   
+
 <app-sidenav></app-sidenav>
-<app-subnavslots></app-subnavslots>
-<app-timeslots></app-timeslots>
+<div id="page-wrapper" >
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+             <h2>ADMIN DASHBOARD</h2>   
+            </div>
+        </div>              
+         <!-- /. ROW  -->
+          <hr />
+        <!-- <div class="row">
+            <div class="col-lg-12 ">
+                <div class="alert alert-info">
+                     <strong>Welcome Admin ! </strong> You Have No pending Task For Today.
+                </div>
+               
+            </div>
+            </div>
+          /. ROW  --> 
+      <div class="row text-center pad-top">
+        <app-subnavslots></app-subnavslots>
+   
 
-<div class="container">
-  <div class="inputName">
-    <h2>Choose Hacker's Group</h2>
-     <select class="drp-down" [(ngModel)]="slot.group_name" >
-        <option  *ngFor= "let d of selectedName" value="{{d.team}}" >{{d.team}}</option>
-      </select>
-   </div>
+      </div>
 
-  <div class="date-assign">
-    <h2>Select Date</h2>
-    <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)" max-width="80%" >
-  </div>
+      <div class="row text-center pad-top">
+        <div class="container">
+          <div class="inputName">
+            <h2>Choose Hacker's Group</h2>
+             <select class="drp-down" [(ngModel)]="slot.group_name" >
+                <option  *ngFor= "let d of selectedName" value="{{d.team}}" >{{d.team}}</option>
+              </select>
+           </div>
+        
+          <div class="date-assign">
+            <h2>Select Date</h2>
+            <input type="date" id="title" name="title" placeholder=""  (change)="onChangeDate($event)" max-width="80%" >
+          </div>
+        
+           <div class="time-asign">
+             <h2>Time Slot</h2>
+            <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
+            <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
+          </div>
+        
+        
+        
+        
+        </div>
+        
 
-   <div class="time-asign">
-     <h2>Time Slot</h2>
-    <input type="time" id="appt" name="appt" required [(ngModel)]="slot.start_time" name="slot.start_time" >
-    <input type="time" id="appt" name="appt" required [(ngModel)]="slot.end_time" name="slot.end_time" >
-  </div>
-  <div class="link-assign">
-    <h2>Link</h2>
-    <input type="text" id="title" name="title" required [(ngModel)]="slot.link" placeholder="">
-  </div> 
+          
+  
+          <div class="button" style="margin-top: 30px;">
+            
+            <button (click)="addSlot()" type="submit" >Assign Slot</button>
+          </div>
 
+          <div class="link-assign">
+            <h2>Link</h2>
+            <input type="text" id="title" name="title" required [(ngModel)]="slot.link" placeholder="">
+          </div> 
 
-<button class="button" (click)="addSlot()" >Add</button>
-<a href="https://www.microsoft.com/en-za/microsoft-teams/log-in" target="_blank" class="btn btn2">Create Link</a>
+          <div class="button" style="margin-top: 20px;">
+            
+            <button  type="submit" ><a href="https://www.microsoft.com/en-za/microsoft-teams/log-in" target="_blank" class="button">Create Link</a></button>
+          </div>
+    </div>
+       
 
 </div>
+     <!-- /. PAGE INNER  -->
+    </div>
+ <!-- /. PAGE WRAPPER  -->
+ 
+ 
+ 
+  

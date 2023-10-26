@@ -1,21 +1,36 @@
 .btns-join{
 
-
+text-align: center;
+margin: 15px 0;
 }
-button{
-    margin-block: 20px;
-    padding: 4px 6px 2px 6px;
-    margin-left: 200px;
-    border-color: rgb(235, 71, 71);
-    border-radius: 10px;
-    margin-top: 48px;
-  }
-  button:hover{
-    margin-block: 20px;
-    padding: 4px 6px 2px 6px;
-    margin-left: 200px;
-    border-color: rgb(235, 71, 71);
-    border-radius: 10px;
-    margin-top: 68px;
-    background-color: rgb(253, 251, 148);
-  }
+button[type="button"] {
+    
+  text-align: center;
+
+  border-radius: 20px;   width: 50%;
+   padding: 20px 40px;
+   background-color: #e6b412;
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+ }
+ 
+ button[type="button"]:hover {
+   background-color: #45a049;
+ }
+  
+
+#hover:hover{
+  background-color: #ff0000;
+}
+.rectangle-5 {
+  height: 40px;
+  
+  background-color: #47509c;
+}
+.timeslot{
+  text-align: center;
+  padding: 7px;
+  color: white;
+}

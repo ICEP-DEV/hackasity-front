@@ -1,0 +1,32 @@
+<div class="row text-center pad-top">
+
+
+  <div class="frame">
+    <table id="excel-table" class="display">
+        <thead>
+            <th>Name of group</th>
+            <th>Points</th>
+            <th>Date</th>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let hacker of table">
+                <td>{{hacker.group_name}}</td>
+                <td>{{hacker.points}}</td>
+                <td>{{hacker.time}}</td>
+                
+                <!-- <td>{{hacker.link}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+    </div>
+   
+       
+
+      <div class="button">
+        
+        <button  type="submit" (click)="exportexcel()" > Export to excel</button>
+        </div>
+      
+
+  </div>
