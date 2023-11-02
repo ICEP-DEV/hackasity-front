@@ -44,3 +44,14 @@
       color: rgb(17, 16, 16);
       border: 1px solid rgb(12, 11, 11);
     }
+
+    @media screen and (max-width: 768px) {
+      #display{
+        font-size: 0.8em;
+        
+      }
+      .frame{
+        display: block;
+      }
+      
+    }
