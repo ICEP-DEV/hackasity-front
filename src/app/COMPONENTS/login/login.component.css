@@ -2,12 +2,13 @@
 .card-body{
   background-color: #000000;
   margin-top: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .gradient-custom-2 {
   margin-top: 10px;
   /* fallback for old browsers */
   background: #fccb90;
+  margin-bottom: 20px;
   
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, #24c6ee, #ffffff, #ffffff,  #f1e4e4);
