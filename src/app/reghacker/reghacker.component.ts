@@ -25,16 +25,15 @@ export class ReghackerComponent {
   }
 
   constructor(private _router:Router,private sityservice: SityService ){};
-
   adminId:any;
 
   register(){
-
     console.log(this.adminId= localStorage.getItem("adminID"))
     this.hackerRegister.Admin_id = this.adminId
     
     var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     console.log(this.hackerRegister.password)
+    
     if (!this.hackerRegister.password.match(decimal)) {
       swal.fire({
         icon: 'error',
