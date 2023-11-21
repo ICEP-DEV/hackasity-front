@@ -189,18 +189,21 @@ export class JscoreboardComponent {
       });*/
   }
 
-  // --------------------------------------------------------------------------
-  scores = new FormGroup({
-    'novelity': new FormGroup('', Validators.required),
-    'usefulness': new FormGroup('', Validators.required),
-    'feasibility': new FormGroup('', Validators.required),
-    'techscore': new FormGroup('', Validators.required),
-    'impact': new FormGroup('', Validators.required),
-    'safety': new FormGroup('', Validators.required),
-  });
 
   scoreSubmit() {
     console.log(this.score.value);
   }
 
+  getAvgScore(novelity: any) {
+    this.gettotalScore.noverlity = Number(novelity.target.value)
+    if (this.gettotalScore.noverlity > 100) {
+      alert("enter numb less than 100")
+      this.noverlity = 0
+      return
+
+    }
+    this.totalPoints = this.gettotalScore.impactScore * (0.25)
+      + this.gettotalScore.noverlity * (0.15) + this.gettotalScore.usefulness * (0.20) +
+      this.gettotalScore.tech * (0.15) + this.gettotalScore.Safety * (0.10) + this.gettotalScore.Feasib * (0.15)
+  }
 }

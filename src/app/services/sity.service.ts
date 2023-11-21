@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,10 @@ export class SityService {
   constructor(private http: HttpClient) { }
 //  url = "https://doubtful-puce-coat.cyclic.app/"
   url = "http://localhost:3000/";
+
+  getResults():Observable<any>{
+    return this.http.get(this.url +'get_all_results')
+  }
 
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {
