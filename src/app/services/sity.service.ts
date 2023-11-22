@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { observable, Observable } from 'rxjs';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +11,10 @@ export class SityService {
   constructor(private http: HttpClient) { }
 //  url = "https://doubtful-puce-coat.cyclic.app/"
   url = "http://localhost:3000/";
+
+  getResults():Observable<any>{
+    return this.http.get(this.url +'get_all_results')
+  }
 
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {
@@ -95,7 +101,7 @@ export class SityService {
  }
  getTeamsNames() {
   // Make an HTTP request to retrieve group names from the backend
-  return this.http.get(this.url +'team/names');
+  return this.http.get(this.url +'teams');
 }
 SponsorReport(){
   return this.http.get(this.url +'report')
@@ -108,5 +114,15 @@ SponsorReport(){
  getGroupNames(){
 
   return this.http.get(this.url +'team/names')
+ }
+
+ submitscore(data:any){
+  return this.http.post(this.url +'submit_score', data, {
+    observe: 'body'
+  })
+ }
+
+ getAverage():Observable<any>{
+  return this.http.get(this.url +'get_all_results')
  }
 }

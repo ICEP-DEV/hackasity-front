@@ -43,7 +43,15 @@ export class JudgereportComponent {
   //   this.dataSource.filter = $event.target.value;
   // }
 
+  readData:any;
+
   ngOnInit() {
+    this.sityservice.getResults().subscribe((res) => {
+      console.log(res, "res==>");
+
+      this.readData = res.results;
+    });
+
     this.slot()
   }
 
@@ -54,8 +62,7 @@ table:any
     this.sityservice.SponsorReport().subscribe((respond) => {
       this.temp=respond
       this.table=this.temp.results
-   
-  })
+    })
   }
 
   exportexcel():void{
