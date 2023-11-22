@@ -44,8 +44,17 @@ export class ResultsComponent {
   //   this.dataSource.filter = $event.target.value;
   // }
 
+  readData:any;
+
+
   ngOnInit() {
     this.slot()
+
+    //call the avg
+    this.sityservice.getAverage().subscribe((res) => {
+      console.log(res, "res==>");
+      this.readData = res.results;
+    });
   }
 
   temp:any

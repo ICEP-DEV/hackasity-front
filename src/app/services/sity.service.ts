@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { observable, Observable } from 'rxjs';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Injectable({
   providedIn: 'root'
@@ -119,5 +120,9 @@ SponsorReport(){
   return this.http.post(this.url +'submit_score', data, {
     observe: 'body'
   })
+ }
+
+ getAverage():Observable<any>{
+  return this.http.get(this.url +'get_all_results')
  }
 }
