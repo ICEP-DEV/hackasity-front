@@ -7,14 +7,14 @@
         <tr>
           <th scope="col">Name of group</th>
           <th scope="col">Points</th>
-          <th scope="col">Date</th>
+          <!-- <th scope="col">Date</th> -->
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let us of readData">
           <td>{{us.group_name}}</td>
           <td>{{us.points}}</td>
-          <td>{{us.time}}</td>
+          <!-- <td>{{us.time}}</td> -->
         </tr>
       </tbody>
     </table>
@@ -24,6 +24,4 @@
   <div class="button">
     <button  type="submit" (click)="exportexcel()" > Export to excel</button>
   </div>
-      
-
 </div>
