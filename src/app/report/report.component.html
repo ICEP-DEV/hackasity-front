@@ -1,125 +1,19 @@
 
-
-
-
 <app-navbar></app-navbar>
-   
-   
-
 <app-sidenav></app-sidenav>
+
 <div id="page-wrapper" >
-    <div id="page-inner">
-        <div class="row">
-            <div class="col-lg-12">
-             <h2>RESULTS</h2>   
-            </div>
-        </div>              
-         <!-- /. ROW  -->
-          <hr />
-        <!-- <div class="row">
-            <div class="col-lg-12 ">
-                <div class="alert alert-info">
-                     <strong>Welcome Admin ! </strong> You Have No pending Task For Today.
-                </div>
-               
-            </div>
-            </div>
-          /. ROW  --> 
-  
-
-          <app-results></app-results>
-     <!-- /. PAGE INNER  -->
-    </div>
- <!-- /. PAGE WRAPPER  -->
- 
- 
- 
-  
-
-<!-- <div class="rectangle-5">
-    <h2 class="timeslot">Report</h2>
-  </div>-->
-  
-  <app-sidenav></app-sidenav>
-
-
-
-
-
-
-
-
-
-   
-   
-
-  <app-sidenav></app-sidenav>
-  <div id="page-wrapper" >
-      <div id="page-inner">
-          <div class="row">
-              <div class="col-lg-12">
-               <h2>REPORT</h2>   
-              </div>
-          </div>              
-           <!-- /. ROW  -->
-            <hr />
-          <!-- <div class="row">
-              <div class="col-lg-12 ">
-                  <div class="alert alert-info">
-                       <strong>Welcome Admin ! </strong> You Have No pending Task For Today.
-                  </div>
-                 
-              </div>
-              </div>
-            /. ROW  --> 
-    
-  
-        <div class="row text-center pad-top">
-   
-      
-          <table id="excel-table" class="table table-bordered">
-              
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Admin Name & Surname</th>
-                  <th scope="col">Judge Name & Surname</th>
-                  <th scope="col">Company Name</th>
-                  <th scope="col">Group Name</th>
-                  <th scope="col">Points</th>
-                  <th scope="col">Date</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let hacker of table">
-                  <th scope="row">{{hacker.group_id}}</th>
-                  <td>{{hacker.name}} {{hacker.surname }}</td>
-                  <td>{{hacker.judge_name}} {{hacker.judge_surname}}</td>
-                  <td>{{hacker.company_name}}</td>
-                  <td>{{hacker.group_name }}</td>
-                  <td>{{hacker.points}}</td>
-                  <td>{{hacker.time}}</td>
-                </tr>
-               
-              </tbody>
-            </table>
-            
-          
-              <div class="button">
-          
-                  <button  type="submit" (click)="exportexcel()" > Export to excel</button>
-                  </div>
-                  
-              
+  <div id="page-inner">
+      <div class="row">
+          <div class="col-lg-12">
+            <h2>RESULTS</h2>   
           </div>
-          
-  
-  </div>
-  
-       <!-- /. PAGE INNER  -->
       </div>
-   <!-- /. PAGE WRAPPER  -->
+      <hr />
+      <app-results></app-results>
+  </div>
+  <app-sidenav></app-sidenav>
+
    
    
    
