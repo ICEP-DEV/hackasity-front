@@ -1,42 +1,29 @@
 <div class="row text-center pad-top">
-
-
   <div class="table-responsive" style="background-color: rgba(0, 0, 0, 0.253);">
     
+    <!-- Table Start -->
     <table class="table" >
       <thead>
         <tr>
-          
           <th scope="col">Name of group</th>
           <th scope="col">Points</th>
           <th scope="col">Date</th>
-         
-         
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let us of readData">
-          
           <td>{{us.group_name}}</td>
           <td>{{us.points}}</td>
           <td>{{us.time}}</td>
-       
         </tr>
-      
       </tbody>
     </table>
-    
-    
-    
-    
-    </div>
-   
-       
-
-      <div class="button">
-        
-        <button  type="submit" (click)="exportexcel()" > Export to excel</button>
-        </div>
+    <!-- Table End -->
+  </div>
+      
+  <div class="button">
+    <button  type="submit" (click)="exportexcel()" > Export to excel</button>
+  </div>
       
 
-  </div>
+</div>
