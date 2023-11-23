@@ -47,10 +47,18 @@ export class SponsorreportComponent implements OnInit{
   // filterData($event : any){
   //   this.dataSource.filter = $event.target.value;
   // }
+  readData:any;
 
   ngOnInit() {
+    this.sityservice.getReport().subscribe((res) => {
+      console.log(res, "res==>");
+
+      this.readData = res.report;
+    });
+
     this.slot()
   }
+  
 
   temp:any
 table:any

@@ -15,7 +15,9 @@ export class SityService {
   getResults():Observable<any>{
     return this.http.get(this.url +'get_all_results')
   }
-
+  getReport():Observable<any>{
+    return this.http.get(this.url +'get_all_report')
+  }
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {
       observe: 'body'
