@@ -6,14 +6,14 @@
       <thead>
         <tr>
           <th scope="col">Name of group</th>
-          <th scope="col">Points</th>
+          <th scope="col">Final Score</th>
           <!-- <th scope="col">Date</th> -->
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let us of readData">
           <td>{{us.group_name}}</td>
-          <td>{{us.points}}</td>
+          <td>{{us.average}}</td>
           <!-- <td>{{us.time}}</td> -->
         </tr>
       </tbody>

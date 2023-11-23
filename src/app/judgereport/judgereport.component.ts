@@ -44,6 +44,7 @@ export class JudgereportComponent {
   // }
 
   readData:any;
+  readScores:any;
 
   ngOnInit() {
     this.sityservice.getResults().subscribe((res) => {
@@ -52,11 +53,17 @@ export class JudgereportComponent {
       this.readData = res.results;
     });
 
+    //call the scores
+    this.sityservice.getScores().subscribe((res) => {
+      console.log(res, "res==>");
+      this.readScores = res.results;
+    });
+
     this.slot()
   }
 
   temp:any
-table:any
+  table:any
 
   slot(){
     this.sityservice.SponsorReport().subscribe((respond) => {
