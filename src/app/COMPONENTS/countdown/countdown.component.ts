@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
+//import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
 
 @Component({
   selector: 'app-countdown',
