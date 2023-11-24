@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
 
@@ -6,11 +6,12 @@ import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
   selector: 'app-countdown',
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 
 export class CountdownComponent {
+  /*
   config: CountdownConfig = {
     leftTime: 60,
     format: 'HH:mm:ss',
@@ -25,5 +26,5 @@ export class CountdownComponent {
   handleEvent(e: CountdownEvent) {
     console.log('Actions', e);
   }
-
+*/
 }
