@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SityService } from '../services/sity.service';
-import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 })
 export class SidenavhackerComponent {
 
-  constructor(private _router:Router,private sityservice: SityService ){};
+  constructor(private _router:Router,){};
 
 
   

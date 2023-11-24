@@ -38,16 +38,18 @@ export class JscoreboardComponent {
     this._router.navigate(['/' + judge])
   }
 
+  judgeId: any
   ngOnInit() {
-    this.getGroupNames()
-    console.log(545454)
+    this.judgeId = localStorage.getItem("judgeId")
 
+    this.getGroupNames(this.judgeId)
+    console.log(545454)
   }
   temp: any
 
 
-  getGroupNames() {
-    this.sityservice.getTeamsNames().subscribe((respond) => {
+  getGroupNames(id: Number) {
+    this.sityservice.getTeamsNames(id).subscribe((respond) => {
       this.temp = respond
       this.selectedGroup = this.temp.results
       console.log(this.selectedGroup)

@@ -16,16 +16,20 @@
                 <thead>
                   <tr>
                     <th scope="col">Group Name</th>
-                    <th scope="col">Points</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">Judge name</th>
+                    <th scope="col">Judge surname</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr *ngFor="let res of readData">
+                  <tr *ngFor="let res of readScores">
                     <td>{{res.group_name}}</td>
-                    <td>{{res.average}}</td>
-                    <td>{{res.time}}</td>
+                    <td>{{res.total}}</td>
+                    <td>{{res.comment}}</td>
+                    <td>{{res.judge_name}}</td>
+                    <td>{{res.judge_surname}}</td>
                   </tr>
                 </tbody>
               </table>

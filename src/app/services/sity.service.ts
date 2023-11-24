@@ -9,12 +9,18 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 export class SityService {
 
   constructor(private http: HttpClient) { }
-//  url = "https://doubtful-puce-coat.cyclic.app/"
-  url = "http://localhost:3000/";
+  url = "https://drab-hen-uniform.cyclic.app/"
+  //url = "http://localhost:3000/";
 
   getResults():Observable<any>{
     return this.http.get(this.url +'get_all_results')
   }
+
+  getScores():Observable<any>{
+    return this.http.get(this.url +'get_scores')
+  }
+
+
 
   judges(body: any) {
     return this.http.post(this.url + 'judges', body, {
@@ -51,7 +57,7 @@ export class SityService {
  }
  
  judgeRegister (body: any){
-  return this.http.post(this.url + 'judge/registration', body, {
+  return this.http.post(this.url + 'register_judges', body, {
     observe: 'body'
   })
  }
@@ -99,9 +105,9 @@ export class SityService {
     observe: 'body'
   })
  }
- getTeamsNames() {
+ getTeamsNames(id:Number) {
   // Make an HTTP request to retrieve group names from the backend
-  return this.http.get(this.url +'teams');
+  return this.http.get(this.url +'teams/' + id);
 }
 SponsorReport(){
   return this.http.get(this.url +'report')
