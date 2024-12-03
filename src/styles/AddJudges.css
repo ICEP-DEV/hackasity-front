@@ -1,0 +1,34 @@
+  
+  .add-judge-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .add-judge-form div {
+    margin-bottom: 15px;
+  }
+  
+  .add-judge-form label {
+    margin-right: 10px;
+  }
+  
+  .add-judge-form input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,162 @@
+.main {
+    display: flex;
+}
+
+
+.main-content-page {
+    margin-left: 250px;
+    width: 80%;
+}
+
+
+.main-content-page h3 {
+    text-align: center;
+}
+
+
+/********************************** DASH ****************************************/
+.dashboard-item {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.dashboard-item h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-box {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 30%;
+    margin: 5px;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.stat-box p {
+    margin: 5px 0;
+}
+
+/********************************  Table  ****************************************/
+#events {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#events td,
+#events th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#events tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#events tr:hover {
+    background-color: #ddd;
+}
+
+#events th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+}
+
+
+/********************************** FORM ******************************************/
+#addEventForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+}
+#addEventForm label {
+    margin: 5px 0;
+}
+#addEventForm input{
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#addEventForm .addEventBtn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+#addEventForm .addEventBtn:hover {
+    background-color: #0056b3;
+}
+
+.datetimeinput{
+    margin: 2px 10px;
+}
+
+#teamList{
+    margin-top: 50px;
+}
+
+/************************************ Team-score ******************************/
+.team-score{
+    margin-top: 50px;
+}
+
+/************************************ Scoring ********************************/
+#judgeScoreForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 500px;
+}
+#judgeScoreForm label {
+    margin: 5px 0;
+}
+#judgeScoreForm input, form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+#judgeScoreForm button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+form button:hover {
+    background-color: #218838;
+}
+
+.teamtobescore{
+    padding-bottom: 80px;
+}

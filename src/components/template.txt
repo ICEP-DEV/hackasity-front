@@ -1,0 +1,14 @@
+import SideBar from '../components/SideBar';
+import '../styles/Styles.css'
+
+function Teams() {
+
+    return (<div className='main'>
+        <SideBar />
+        <div className='main-content-page'>
+            <h3>Add New Event</h3>
+        </div>
+    </div>)
+}
+
+export default Teams;

@@ -1,0 +1,32 @@
+#sidebar{
+  background-color: rgba(0, 0, 0, 0.808);
+  height: 100vh;
+  color: white;
+  padding: 50px;
+  position: fixed; 
+  overflow: hidden; 
+}
+
+#sidebar-head{
+  border-bottom: 2px solid rgba(248, 248, 255, 0.911);
+  display: flex;
+}
+
+.side-content{
+  margin-top: 20px;
+  display: flex;
+}
+
+.side-label{
+  margin-left: 10px;
+}
+
+.link-label{
+  color: #ffff;
+  text-decoration: none;
+}
+
+.link-label:hover{
+  color: rgba(168, 168, 168, 0.808);
+  cursor: pointer;
+}
