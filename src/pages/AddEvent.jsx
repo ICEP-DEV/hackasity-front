@@ -6,6 +6,8 @@ import { api } from '../Data/Api';
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Popup from './Popup/Popup';
+
 function AddEvent() {
     const navigate = useNavigate();
 
@@ -14,6 +16,7 @@ function AddEvent() {
     const [startTime, setStartTime] = useState('');
     const [endDate, setEndDate] = useState('');
     const [endTime, setEndTime] = useState('');
+    const [ButtonPopup, setButtonPopup] = useState(false);
 
     function addEvent() {
         if(event_name === ''){
@@ -36,7 +39,7 @@ function AddEvent() {
             toast.warn('Select end time');
             return;
         }
-
+        setButtonPopup(true);
         axios.post(api + 'add_event', { event_name, startDate, startTime, endDate, endTime }).then(respond => {
             console.log(respond.data);
             if(respond.data.success){
@@ -46,12 +49,13 @@ function AddEvent() {
                 }, 5000);
             }
             else{
+                setButtonPopup(false);
                 toast(respond.data.message);
             }
 
         }, err => {
+            setButtonPopup(false);
             console.log(err);
-
         })
 
 
@@ -59,6 +63,7 @@ function AddEvent() {
 
     return (<div className='main'>
         <SideBar />
+        <Popup trigger={ButtonPopup} setTrigger={setButtonPopup} />
         <ToastContainer />
         <div className='main-content-page'>
             <h3>Add New Event</h3>

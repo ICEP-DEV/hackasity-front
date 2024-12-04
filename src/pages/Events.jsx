@@ -8,6 +8,8 @@ import { api } from '../Data/Api';
 import Popup from '../components/Popup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaBeer } from "react-icons/fa";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 function Events() {
     const navigate = useNavigate();
@@ -60,8 +62,8 @@ function Events() {
         for (var k = 0; k < CheckedTeams.length; k++) {
             axios.put(api + 'assign_team_event/' + CheckedTeams[k].id, { event_id }).then(respond => {
                 if (k === CheckedTeams.length) {
-                    toast('Done');
                     setTimeout(function () {
+                        toast('Done');
                         setTeamPopup(false)
                     }, 5000);
 
@@ -72,7 +74,6 @@ function Events() {
     }
 
     let teamTeable = <>
-
         <table className="team-list" id="events">
             <thead>
                 <th>#</th>
@@ -95,8 +96,8 @@ function Events() {
             </tbody>
         </table>
         <div style={{ width: '50%', margin: 'auto', marginTop: '20px', textAlign: 'center', padding: '20px' }}>
-            {CheckedTeams.length > 0 ? <button className='btn btn-primary' onClick={addToEvent}>Add To Event</button>
-                : <button className='btn btn-primary' disabled>Add To Event</button>}
+            {Teams.length > 0 ? <button className='btn btn-primary' onClick={addToEvent}>Add To Event</button>
+                : <button className='btn btn-primary' disabled >Add To Event</button>}
         </div>
 
     </>
@@ -105,7 +106,7 @@ function Events() {
         <ToastContainer />
         <div className='main-content-page'>
             <h3>Events</h3>
-            <button onClick={() => navigate('/addevent')}>Add Event</button>
+            <button onClick={() => navigate('/addevent')} className='btn btn-primary'>Add Event  <IoAddCircleOutline size={25} color='#ffff'/></button>
 
             <table id="events" >
                 <thead>
@@ -120,7 +121,7 @@ function Events() {
                         <tr key={xid}>
                             <td>{event.event_name}</td>
                             <td>{event.start_date}</td>
-                            <td>{event.start_date}</td>
+                            <td>{event.end_date}</td>
                             <td>{event.event_status}</td>
                             <td>{event.event_status === 'Upcoming' ? <button className='btn btn-primary' onClick={() => popTeamTable(event)}>Assign Teams</button> :
                                 <><button disabled className='btn btn-primary'>Assign Teams</button></>}

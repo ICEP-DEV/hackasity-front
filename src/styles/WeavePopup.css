@@ -1,0 +1,54 @@
+
+.register-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.082);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .center {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(14, 14, 243, 0.425);
+  }
+  .line {
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(45deg, cyan, #8b2b2b);
+    margin: 10px;
+    animation: line 1s linear infinite;
+  }
+  .line:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .line:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .line:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .line:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .line:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes line {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }

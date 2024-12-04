@@ -3,73 +3,80 @@ import { NavLink, useNavigate } from "react-router-dom";
 import '../styles/Login.css';
 import axios from 'axios'
 import { api } from '../Data/Api';
+import Popup from './Popup/Popup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('');
     const navigate = useNavigate();
 
+    const [ButtonPopup, setButtonPopup] = useState(false);
     const handleLogin = (e) => {
         e.preventDefault();
 
         if (role === '') {
-
+            toast.warn('Select role');
             return
         }
         if (email === '') {
-
+            toast.warn('Enter email');
             return
         }
         if (password === '') {
-
+            toast.warn('Enter password');
             return
         }
+        setButtonPopup(true);
 
-        if (role === "Admin") {
-            axios.post(api + 'admin_login', { email, password }).then(respond => {
-                console.log(respond);
-                if (respond.data.success) {
-                    var results = {
-                        userId: respond.data.results[0].id,
-                        email: respond.data.results[0].email,
-                        name: respond.data.results[0].name,
-                        surname: respond.data.results[0].surname,
+        setTimeout(() => {
+            if (role === "Admin") {
+                axios.post(api + 'admin_login', { email, password }).then(respond => {
+                    if (respond.data.success) {
+                        var results = {
+                            userId: respond.data.results[0].id,
+                            email: respond.data.results[0].email,
+                            name: respond.data.results[0].name,
+                            surname: respond.data.results[0].surname,
+                        }
+                        localStorage.setItem('hackersity', JSON.stringify(results));
+                        navigate('/admindash');
                     }
-
-                    localStorage.setItem('hackersity', JSON.stringify(results));
-                    navigate('/admindash');
-                }
-                else {
-                    alert(respond.data.message);
-                }
-            }, err => {
-                console.log(err);
-
-            })
-
-        }
-        else if (role === "Judge") {
-            axios.post(api + 'judge_login', { email, password }).then(respond => {
-                console.log(respond);
-                if (respond.data.success) {
-                    var results = {
-                        userId: respond.data.results[0].id,
-                        email: respond.data.results[0].email,
-                        name: respond.data.results[0].name,
-                        surname: respond.data.results[0].surname,
+                    else {
+                        toast.warn('Enter password');
+                        // alert(respond.data.message);
+                        setButtonPopup(false);
                     }
-                    localStorage.setItem('hackersity', JSON.stringify(results));
-                    navigate('/judgedash');
-                }
-                else {
-                    alert(respond.data.message);
-                }
-            }, err => {
-                console.log(err);
+                }, err => {
+                    setButtonPopup(false);
+                    console.log(err);
+                })
 
-            })
+            }
+            else if (role === "Judge") {
+                axios.post(api + 'judge_login', { email, password }).then(respond => {
+                    console.log(respond);
+                    if (respond.data.success) {
+                        var results = {
+                            userId: respond.data.results[0].id,
+                            email: respond.data.results[0].email,
+                            name: respond.data.results[0].name,
+                            surname: respond.data.results[0].surname,
+                        }
+                        localStorage.setItem('hackersity', JSON.stringify(results));
+                        navigate('/judgedash');
+                    }
+                    else {
+                        alert(respond.data.message);
+                    }
+                }, err => {
+                    console.log(err);
 
-        }
+                })
+
+            }
+        }, 2000)
         // Mock login validation (replace this with actual validation or API call)
         // if (email === "admin@example.com" && password === "password" && role) {
         //   if (role === "Admin") {
@@ -84,6 +91,8 @@ function Login() {
 
     return (
         <div className="login">
+            <ToastContainer />
+            <Popup trigger={ButtonPopup} setTrigger={setButtonPopup} />
             <form className="form" onSubmit={handleLogin}>
                 <h1 className="title">Login</h1>
 
